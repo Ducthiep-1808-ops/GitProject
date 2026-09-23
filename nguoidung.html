@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <title>Form Đăng Ký Người Dùng</title>
+    <style>
+        body {
+            font-family: "Segoe UI", Tahoma, sans-serif;
+            background-color: #f0f4f8;
+            display: flex;
+            justify-content: center;
+            padding-top: 40px;
+        }
+
+        form {
+            background-color: #ffffff;
+            width: 380px;
+            padding: 25px 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        h2 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 5px;
+            color: #34495e;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"] {
+            width: 100%;
+            padding: 8px 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+
+        .gender-group {
+            margin-top: 8px;
+        }
+
+        .gender-group label {
+            display: inline-block;
+            font-weight: normal;
+            color: #2c3e50;
+            margin-right: 15px;
+            margin-top: 5px;
+        }
+
+        .button-group {
+            text-align: center;
+            margin-top: 25px;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            padding: 8px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 14px;
+            cursor: pointer;
+            margin: 0 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #3498db;
+            color: white;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #2980b9;
+        }
+
+        input[type="reset"] {
+            background-color: #e74c3c;
+            color: white;
+        }
+
+        input[type="reset"]:hover {
+            background-color: #c0392b;
+        }
+    </style>
+</head>
+<body>
+
+    <form action="http://demo.codegym.vn/6/registration_form/register.php" method="POST">
+        <h2>Đăng Ký Người Dùng</h2>
+
+        <label for="name">Họ và tên</label>
+        <input type="text" id="name" name="name" placeholder="Nhập họ và tên"/>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Nhập email"/>
+
+        <label for="phone">Số điện thoại</label>
+        <input type="tel" id="phone" name="phone" placeholder="Nhập số điện thoại"/>
+
+        <label>Giới tính</label>
+        <div class="gender-group">
+            <label><input type="radio" name="gender" value="Nam"/> Nam</label>
+            <label><input type="radio" name="gender" value="Nữ"/> Nữ</label>
+            <label><input type="radio" name="gender" value="Khác"/> Khác</label>
+        </div>
+
+        <div class="button-group">
+            <input type="submit" value="Đăng ký"/>
+            <input type="reset" value="Nhập lại"/>
+        </div>
+    </form>
+
+</body>
+</html>
