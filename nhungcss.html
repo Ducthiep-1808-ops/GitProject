@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ba Cách Sử Dụng CSS</title>
+
+    <!-- Phần 2: Internal Style - đặt CSS ngay trong file HTML bằng thẻ <style> -->
+    <!-- Phần 3: External Style - trong bài gốc dùng file .css riêng, ở đây gộp chung vào cùng thẻ <style> này cho tiện, nhưng vẫn tách riêng nhóm class để phân biệt rõ với Phần 2 -->
+    <style>
+        .internal-title,
+        .internal-text {
+            color: blue;
+        }
+        .external-title,
+        .external-text {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Ba cách sử dụng CSS trong HTML</h1>
+
+    <!-- Phần 1: Inline Style - viết CSS trực tiếp trong thuộc tính style của thẻ -->
+    <section>
+        <h2>Phần 1: Inline Style</h2>
+        <h3 style="color: red;">Đây là tiêu đề dùng Inline Style</h3>
+        <p style="color: red;">Đây là đoạn văn được đổi màu chữ trực tiếp bằng thuộc tính <code>style</code> ngay trên thẻ HTML.</p>
+    </section>
+
+    <!-- Phần 2: Internal Style -->
+    <section>
+        <h2>Phần 2: Internal Style</h2>
+        <h3 class="internal-title">Đây là tiêu đề dùng Internal Style</h3>
+        <p class="internal-text">Đây là đoạn văn được đổi màu chữ bằng CSS đặt trong thẻ <code>&lt;style&gt;</code> ở phần <code>&lt;head&gt;</code> của trang.</p>
+    </section>
+
+    <!-- Phần 3: External Style -->
+    <section>
+        <h2>Phần 3: External Style</h2>
+        <h3 class="external-title">Đây là tiêu đề dùng External Style</h3>
+        <p class="external-text">Đây là đoạn văn được đổi màu chữ bằng CSS viết trong một file riêng (<code>style.css</code>) và liên kết vào trang qua thẻ <code>&lt;link&gt;</code>. (Trong file gộp này, phần CSS của style.css đã được chép vào chung thẻ <code>&lt;style&gt;</code> ở trên để chỉ cần 1 file.)</p>
+    </section>
+
+</body>
+</html>
