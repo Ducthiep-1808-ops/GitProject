@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model - Bố cục 3 thẻ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Xây dựng bố cục với Mô hình hộp CSS</h1>
+    <p class="intro">Mở Developer Tools (F12) → tab <strong>Computed</strong> → kiểm tra từng thẻ bên dưới để so sánh kích thước thực tế giữa <code>content-box</code> và <code>border-box</code>.</p>
+
+    <div class="container">
+        <div class="card">
+            <p>Thẻ 1 — <code>box-sizing: content-box;</code><br>width/height khai báo là kích thước phần <strong>nội dung</strong>, padding và border sẽ được <strong>cộng thêm</strong> vào bên ngoài.</p>
+        </div>
+
+        <div class="card">
+            <p>Thẻ 2 — <code>box-sizing: border-box;</code><br>width/height khai báo là kích thước <strong>tổng cộng</strong> (đã bao gồm padding và border).</p>
+        </div>
+
+        <div class="card">
+            <p>Thẻ 3 — cũng dùng <code>box-sizing: border-box;</code> nhưng khác màu nền để dễ phân biệt với Thẻ 2.</p>
+        </div>
+    </div>
+
+</body>
+</html>
