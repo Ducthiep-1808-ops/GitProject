@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Bảng trong CSS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      line-height: 1.6;
+    }
+    h1 { margin-bottom: 4px; }
+    h2 {
+      margin-top: 48px;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 6px;
+    }
+    p.note { color: #555; }
+    code { background: #eee; padding: 2px 6px; border-radius: 4px; }
+
+    /* ===== 1. Đường viền của bảng (border đôi - mặc định) ===== */
+    .t1, .t1 th, .t1 td {
+      border: 1px solid black;
+    }
+
+    /* ===== 2. Bỏ đường viền đôi (border-collapse) ===== */
+    .t2 {
+      border-collapse: collapse;
+    }
+    .t2, .t2 th, .t2 td {
+      border: 1px solid black;
+    }
+
+    /* ===== 3. Chiều rộng / chiều cao ===== */
+    .t3 {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    .t3, .t3 th, .t3 td { border: 1px solid black; }
+    .t3 th { height: 50px; }
+
+    /* ===== 4. Căn chỉnh theo chiều ngang (text-align) ===== */
+    .t4 {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    .t4, .t4 th, .t4 td { border: 1px solid black; }
+    .t4 th { text-align: left; }
+
+    /* ===== 5. Căn chỉnh theo chiều dọc (vertical-align) ===== */
+    .t5 {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    .t5, .t5 th, .t5 td { border: 1px solid black; }
+    .t5 td { height: 70px; vertical-align: bottom; }
+
+    /* ===== 6. Padding trong bảng ===== */
+    .t6 {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    .t6, .t6 th, .t6 td { border: 1px solid black; }
+    .t6 th, .t6 td { padding: 15px; }
+
+    /* ===== 7. Màu sắc trong bảng ===== */
+    .t7 {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    .t7, .t7 th, .t7 td {
+      border: 1px solid #96D4D4;
+    }
+    .t7 th {
+      background-color: #96D4D4;
+      color: white;
+      padding: 10px;
+    }
+    .t7 td { padding: 10px; }
+  </style>
+</head>
+<body>
+
+  <h1>Bảng trong CSS</h1>
+  <p class="note">Giao diện của bảng trong HTML có thể được cải thiện đáng kể với CSS.</p>
+
+  <!-- 1. Đường viền -->
+  <h2>1. Đường viền của bảng (border)</h2>
+  <table class="t1">
+    <tr><th>Tên</th><th>Chức vụ</th></tr>
+    <tr><td>Nguyễn Văn A</td><td>Nhân viên</td></tr>
+    <tr><td>Trần Thị B</td><td>Quản lý</td></tr>
+  </table>
+  <p class="note">Bảng trên có đường viền đôi vì <code>&lt;table&gt;</code>, <code>&lt;th&gt;</code> và <code>&lt;td&gt;</code> đều có đường viền riêng.</p>
+
+  <!-- 2. border-collapse -->
+  <h2>2. Bỏ các đường viền đôi (border-collapse)</h2>
+  <table class="t2">
+    <tr><th>Tên</th><th>Chức vụ</th></tr>
+    <tr><td>Nguyễn Văn A</td><td>Nhân viên</td></tr>
+    <tr><td>Trần Thị B</td><td>Quản lý</td></tr>
+  </table>
+  <p class="note"><code>border-collapse: collapse;</code> gộp các đường viền thành một đường duy nhất.</p>
+
+  <!-- 3. width / height -->
+  <h2>3. Chiều rộng và chiều cao của bảng</h2>
+  <table class="t3">
+    <tr><th>Tên</th><th>Chức vụ</th></tr>
+    <tr><td>Nguyễn Văn A</td><td>Nhân viên</td></tr>
+    <tr><td>Trần Thị B</td><td>Quản lý</td></tr>
+  </table>
+  <p class="note">Bảng rộng <code>100%</code>, các ô <code>&lt;th&gt;</code> cao <code>50px</code>.</p>
+
+  <!-- 4. text-align -->
+  <h2>4. Căn chỉnh theo chiều ngang (text-align)</h2>
+  <table class="t4">
+    <tr><th>Tên</th><th>Chức vụ</th></tr>
+    <tr><td>Nguyễn Văn A</td><td>Nhân viên</td></tr>
+    <tr><td>Trần Thị B</td><td>Quản lý</td></tr>
+  </table>
+  <p class="note">Văn bản trong <code>&lt;th&gt;</code> được canh trái thay vì canh giữa mặc định.</p>
+
+  <!-- 5. vertical-align -->
+  <h2>5. Căn chỉnh theo chiều dọc (vertical-align)</h2>
+  <table class="t5">
+    <tr><th>Tên</th><th>Chức vụ</th></tr>
+    <tr><td>Nguyễn Văn A</td><td>Nhân viên</td></tr>
+    <tr><td>Trần Thị B</td><td>Quản lý</td></tr>
+  </table>
+  <p class="note">Nội dung trong <code>&lt;td&gt;</code> được canh xuống dưới (bottom) thay vì canh giữa mặc định.</p>
+
+  <!-- 6. padding -->
+  <h2>6. Padding trong bảng</h2>
+  <table class="t6">
+    <tr><th>Tên</th><th>Chức vụ</th></tr>
+    <tr><td>Nguyễn Văn A</td><td>Nhân viên</td></tr>
+    <tr><td>Trần Thị B</td><td>Quản lý</td></tr>
+  </table>
+  <p class="note">Khoảng cách giữa đường viền và nội dung được nới rộng nhờ <code>padding: 15px;</code>.</p>
+
+  <!-- 7. Màu sắc -->
+  <h2>7. Màu sắc trong bảng</h2>
+  <table class="t7">
+    <tr><th>Tên</th><th>Chức vụ</th></tr>
+    <tr><td>Nguyễn Văn A</td><td>Nhân viên</td></tr>
+    <tr><td>Trần Thị B</td><td>Quản lý</td></tr>
+  </table>
+  <p class="note">Đường viền, màu nền và màu chữ của <code>&lt;th&gt;</code> được tuỳ chỉnh riêng.</p>
+
+</body>
+</html>
