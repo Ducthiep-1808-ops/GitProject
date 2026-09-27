@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Lịch họp công ty</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+    }
+    table {
+      border-collapse: collapse;
+      width: 70%;
+    }
+    th, td {
+      border: 1px solid #333;
+      padding: 10px 14px;
+      text-align: left;
+      vertical-align: middle;
+    }
+    th {
+      background-color: #f0f0f0;
+    }
+    .all-day {
+      text-align: center;
+      font-style: italic;
+      background-color: #fdf6e3;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Lịch họp công ty</h1>
+
+  <table>
+    <tr>
+      <th>Ngày</th>
+      <th>Giờ</th>
+      <th>Nội dung cuộc họp</th>
+    </tr>
+
+    <!-- Thứ Hai: 2 cuộc họp -> gộp cột Ngày bằng rowspan -->
+    <tr>
+      <td rowspan="2">Thứ Hai, 01/10</td>
+      <td>08:00 - 09:00</td>
+      <td>Họp giao ban đầu tuần</td>
+    </tr>
+    <tr>
+      <td>10:00 - 11:30</td>
+      <td>Phỏng vấn ứng viên</td>
+    </tr>
+
+    <!-- Thứ Ba: sự kiện cả ngày -> gộp cột Giờ và Nội dung bằng colspan -->
+    <tr>
+      <td>Thứ Ba, 02/10</td>
+      <td colspan="2" class="all-day">Cả ngày - Team building ngoài trời</td>
+    </tr>
+
+    <!-- Thứ Tư: 3 cuộc họp -> gộp cột Ngày bằng rowspan -->
+    <tr>
+      <td rowspan="3">Thứ Tư, 03/10</td>
+      <td>09:00 - 10:00</td>
+      <td>Họp với đối tác A</td>
+    </tr>
+    <tr>
+      <td>10:00 - 12:00</td>
+      <td>Họp với đối tác B</td>
+    </tr>
+    <tr>
+      <td>14:00 - 15:00</td>
+      <td>Báo cáo tiến độ dự án</td>
+    </tr>
+
+    <!-- Thứ Năm: 1 cuộc họp -->
+    <tr>
+      <td>Thứ Năm, 04/10</td>
+      <td>13:30 - 14:30</td>
+      <td>Họp tổng kết tháng</td>
+    </tr>
+  </table>
+
+</body>
+</html>
