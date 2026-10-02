@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hệ Thống Đặt Vé & Quản Lý Xe Buýt - BusGo</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        // Hàm chuyển đổi qua lại giữa trang Đăng nhập và Trang chủ để bạn dễ test
+        function switchPage(pageId) {
+            document.getElementById('login-page').classList.add('hidden');
+            document.getElementById('home-page').classList.add('hidden');
+            document.getElementById(pageId).classList.remove('hidden');
+        }
+    </script>
+</head>
+<body class="bg-slate-50 font-sans antialiased text-slate-800">
+
+    <!-- ================= 1. TRANG ĐĂNG NHẬP (LOGIN PAGE) ================= -->
+    <div id="login-page" class="min-h-screen flex items-center justify-center p-4">
+        <div class="max-w-4xl w-full bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col md:flex-row">
+            
+            <!-- Cột trái: Banner & Slogan -->
+            <div class="md:w-1/2 bg-blue-600 p-8 text-white flex flex-col justify-between relative overflow-hidden">
+                <div class="absolute -right-10 -bottom-10 w-48 h-48 bg-blue-500 rounded-full opacity-50"></div>
+                <div>
+                    <div class="flex items-center space-x-2 text-2xl font-bold">
+                        <i class="fa-solid fa-bus"></i>
+                        <span>BusGo</span>
+                    </div>
+                </div>
+                <div class="my-auto py-10 z-10">
+                    <h2 class="text-3xl font-extrabold mb-4">Di chuyển thông minh, hành trình trọn vẹn</h2>
+                    <p class="text-blue-100 text-sm leading-relaxed">Đặt vé nhanh chóng, theo dõi xe buýt theo thời gian thực và quản lý vé tháng dễ dàng trong một ứng dụng.</p>
+                </div>
+                <div class="text-xs text-blue-200">
+                    &copy; 2026 BusGo Smart Transportation.
+                </div>
+            </div>
+
+            <!-- Cột phải: Form đăng nhập -->
+            <div class="md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
+                <div class="mb-8">
+                    <h3 class="text-2xl font-bold text-slate-900">Đăng Nhập</h3>
+                    <p class="text-sm text-slate-500 mt-1">Chào mừng bạn quay lại hệ thống BusGo</p>
+                </div>
+
+                <form onsubmit="event.preventDefault(); switchPage('home-page');" class="space-y-4">
+                    <div>
+                        <label class="block text-xs font-semibold uppercase text-slate-600 mb-1">Số điện thoại hoặc Email</label>
+                        <div class="relative">
+                            <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-slate-400">
+                                <i class="fa-regular fa-user"></i>
+                            </span>
+                            <input type="text" required placeholder="Nhập SĐT hoặc Email của bạn" class="w-full pl-10 pr-4 py-2.5 border border-slate-200 rounded-lg text-sm focus:outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-semibold uppercase text-slate-600 mb-1">Mật khẩu</label>
+                        <div class="relative">
+                            <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-slate-400">
+                                <i class="fa-solid fa-lock"></i>
+                            </span>
+                            <input type="password" required placeholder="••••••••" class="w-full pl-10 pr-4 py-2.5 border border-slate-200 rounded-lg text-sm focus:outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600">
+                        </div>
+                    </div>
+
+                    <div class="flex items-center justify-between text-xs">
+                        <label class="flex items-center text-slate-600 cursor-pointer">
+                            <input type="checkbox" class="rounded border-slate-300 text-blue-600 focus:ring-blue-500 mr-2"> Nhớ tài khoản
+                        </label>
+                        <a href="#" class="text-blue-600 hover:underline font-medium">Quên mật khẩu?</a>
+                    </div>
+
+                    <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2.5 rounded-lg transition duration-200 text-sm shadow-md shadow-blue-200">
+                        Đăng Nhập
+                    </button>
+                </form>
+
+                <div class="mt-8 text-center text-xs text-slate-500">
+                    Chưa có tài khoản? <a href="#" class="text-blue-600 font-semibold hover:underline">Đăng ký ngay</a>
+                </div>
+
+                <!-- Nút chuyển nhanh sang Trang chủ để preview (Tiện ích cho bạn xem demo) -->
+                <div class="mt-4 pt-4 border-t border-slate-100 text-center">
+                    <button onclick="switchPage('home-page')" class="text-xs text-slate-400 hover:text-blue-600 underline">
+                        [Xem nhanh Trang Chủ Hành Khách]
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ================= 2. TRANG CHỦ HÀNH KHÁCH (HOMEPAGE) ================= -->
+    <div id="home-page" class="hidden min-h-screen flex flex-col">
+        
+        <!-- Thanh điều hướng (Navbar) -->
+        <header class="bg-white border-b border-slate-200 sticky top-0 z-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+                <div class="flex items-center space-x-8">
+                    <div class="flex items-center space-x-2 text-blue-600 font-bold text-xl cursor-pointer" onclick="switchPage('home-page')">
+                        <i class="fa-solid fa-bus"></i>
+                        <span>BusGo</span>
+                    </div>
+                    <nav class="hidden md:flex space-x-6 text-sm font-medium">
+                        <a href="#" class="text-blue-600 font-semibold">Trang chủ</a>
+                        <a href="#" class="text-slate-600 hover:text-blue-600">Tra cứu tuyến</a>
+                        <a href="#" class="text-slate-600 hover:text-blue-600">Vé của tôi</a>
+                        <a href="#" class="text-slate-600 hover:text-blue-600">Vé tháng</a>
+                        <a href="#" class="text-slate-600 hover:text-blue-600">Hỗ trợ</a>
+                    </nav>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <!-- Ví điện tử -->
+                    <div class="hidden sm:flex items-center bg-slate-100 px-3 py-1.5 rounded-full text-xs font-medium text-slate-700">
+                        <i class="fa-solid fa-wallet text-blue-600 mr-2"></i>
+                        <span>250.000 đ</span>
+                    </div>
+                    <!-- Thông báo -->
+                    <button class="text-slate-500 hover:text-blue-600 relative p-2">
+                        <i class="fa-regular fa-bell text-lg"></i>
+                        <span class="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full"></span>
+                    </button>
+                    <!-- Avatar & Đăng xuất -->
+                    <div class="flex items-center space-x-2 border-l pl-4 border-slate-200">
+                        <div class="w-9 h-9 bg-blue-100 text-blue-600 font-bold rounded-full flex items-center justify-center text-sm">
+                            HN
+                        </div>
+                        <button onclick="switchPage('login-page')" title="Đăng xuất" class="text-xs text-slate-400 hover:text-red-500 ml-2">
+                            <i class="fa-solid fa-right-from-bracket text-base"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Nội dung chính -->
+        <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-6">
+            
+            <!-- Banner Khuyến mãi / Vé tháng -->
+            <div class="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-6 sm:p-8 text-white shadow-md flex flex-col sm:flex-row justify-between items-center">
+                <div class="space-y-2 mb-4 sm:mb-0">
+                    <span class="bg-blue-500 text-blue-50 text-xs font-semibold px-2.5 py-1 rounded-full">Ưu đãi học sinh sinh viên</span>
+                    <h2 class="text-2xl sm:text-3xl font-bold">Giảm ngay 30% khi đăng ký vé tháng trực tuyến</h2>
+                    <p class="text-blue-100 text-sm">Áp dụng cho tất cả các tuyến xe buýt nội đô trong tháng này.</p>
+                </div>
+                <button class="bg-white text-blue-600 font-semibold px-5 py-2.5 rounded-xl text-sm shadow hover:bg-blue-50 transition">
+                    Đăng Ký Ngay
+                </button>
+            </div>
+
+            <!-- Widget Đặt vé nhanh (Quick Booking Card) -->
+            <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100">
+                <h3 class="text-base font-bold text-slate-900 mb-4 flex items-center">
+                    <i class="fa-solid fa-ticket text-blue-600 mr-2"></i> Đặt Vé Nhanh
+                </h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div>
+                        <label class="block text-xs font-semibold uppercase text-slate-500 mb-1">Điểm đi</label>
+                        <div class="relative">
+                            <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-blue-600"><i class="fa-solid fa-circle-dot text-xs"></i></span>
+                            <select class="w-full pl-9 pr-3 py-2.5 bg-slate-50 border border-slate-200 rounded-lg text-sm focus:outline-none focus:border-blue-600">
+                                <option>Bến xe Miền Đông</option>
+                                <option>Đại học Quốc gia</option>
+                                <option>Trạm Cầu Giấy</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold uppercase text-slate-500 mb-1">Điểm đến</label>
+                        <div class="relative">
+                            <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-red-500"><i class="fa-solid fa-location-dot text-xs"></i></span>
+                            <select class="w-full pl-9 pr-3 py-2.5 bg-slate-50 border border-slate-200 rounded-lg text-sm focus:outline-none focus:border-blue-600">
+                                <option>Chợ Bến Thành</option>
+                                <option>Bến xe Miền Tây</option>
+                                <option>Trạm Mỹ Đình</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold uppercase text-slate-500 mb-1">Ngày đi</label>
+                        <input type="date" value="2026-09-26" class="w-full px-3 py-2.5 bg-slate-50 border border-slate-200 rounded-lg text-sm focus:outline-none focus:border-blue-600">
+                    </div>
+                    <div class="flex items-end">
+                        <button class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2.5 rounded-lg text-sm shadow transition duration-200 flex items-center justify-center space-x-2">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <span>Tìm Chuyến Xe</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lối tắt tính năng (Quick Actions) -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                <a href="#" class="bg-white p-4 rounded-xl shadow-sm border border-slate-100 hover:border-blue-200 transition text-center group">
+                    <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:bg-blue-600 group-hover:text-white transition">
+                        <i class="fa-solid fa-qrcode text-lg"></i>
+                    </div>
+                    <h4 class="font-semibold text-sm">Vé Của Tôi</h4>
+                    <p class="text-xs text-slate-400 mt-0.5">Mã QR lên xe</p>
+                </a>
+                <a href="#" class="bg-white p-4 rounded-xl shadow-sm border border-slate-100 hover:border-blue-200 transition text-center group">
+                    <div class="w-12 h-12 bg-emerald-50 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:bg-emerald-600 group-hover:text-white transition">
+                        <i class="fa-solid fa-location-arrow text-lg"></i>
+                    </div>
+                    <h4 class="font-semibold text-sm">Theo Dõi GPS</h4>
+                    <p class="text-xs text-slate-400 mt-0.5">Xe buýt thời gian thực</p>
+                </a>
+                <a href="#" class="bg-white p-4 rounded-xl shadow-sm border border-slate-100 hover:border-blue-200 transition text-center group">
+                    <div class="w-12 h-12 bg-amber-50 text-amber-600 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:bg-amber-600 group-hover:text-white transition">
+                        <i class="fa-solid fa-id-card text-lg"></i>
+                    </div>
+                    <h4 class="font-semibold text-sm">Vé Tháng</h4>
+                    <p class="text-xs text-slate-400 mt-0.5">Đăng ký & Gia hạn</p>
+                </a>
+                <a href="#" class="bg-white p-4 rounded-xl shadow-sm border border-slate-100 hover:border-blue-200 transition text-center group">
+                    <div class="w-12 h-12 bg-purple-50 text-purple-600 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:bg-purple-600 group-hover:text-white transition">
+                        <i class="fa-solid fa-headset text-lg"></i>
+                    </div>
+                    <h4 class="font-semibold text-sm">Góp Ý / Hỗ Trợ</h4>
+                    <p class="text-xs text-slate-400 mt-0.5">Gửi khiếu nại</p>
+                </a>
+            </div>
+
+            <!-- Chuyến xe đang hoạt động gần bạn (GPS Tracking Widget) -->
+            <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="text-base font-bold text-slate-900 flex items-center">
+                        <i class="fa-solid fa-satellite-dish text-emerald-500 mr-2 animate-pulse"></i> Chuyến Xe Gần Trạm Của Bạn
+                    </h3>
+                    <span class="text-xs text-blue-600 font-semibold hover:underline cursor-pointer">Xem bản đồ lớn &rarr;</span>
+                </div>
+                
+                <div class="space-y-3">
+                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 flex flex-col sm:flex-row justify-between items-start sm:items-center">
+                        <div class="space-y-1 mb-3 sm:mb-0">
+                            <div class="flex items-center space-x-2">
+                                <span class="bg-blue-600 text-white text-xs px-2 py-0.5 font-bold rounded">Tuyến 05</span>
+                                <span class="font-semibold text-sm">Bến xe Miền Đông - Chợ Bến Thành</span>
+                            </div>
+                            <p class="text-xs text-slate-500">Trạm sắp tới: <strong class="text-slate-700">Trạm Cầu Giấy</strong> (Cách 3 phút / 800m)</p>
+                        </div>
+                        <button class="bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-medium px-4 py-2 rounded-lg transition shadow-sm">
+                            <i class="fa-solid fa-map-location-dot mr-1"></i> Mở Bản Đồ GPS
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-white border-t border-slate-200 py-6 text-center text-xs text-slate-400">
+            <p>&copy; 2026 BusGo Smart Transportation System. All rights reserved.</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
