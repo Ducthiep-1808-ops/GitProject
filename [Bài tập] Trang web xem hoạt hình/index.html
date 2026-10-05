@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KidsToon - Xem hoạt hình trực tuyến</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ===== HEADER + HEAD-LINK (cố định khi cuộn) ===== -->
+    <div id="header">
+        <div class="header-inner">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">&#9654;</span>
+                <span class="logo-text">Kids<b>Toon</b></span>
+            </a>
+            <div class="search-box">
+                <input type="search" id="searchInput" placeholder="Tìm phim theo tên...">
+            </div>
+        </div>
+        <div id="head-link">
+            <a href="#" class="active">Trang chủ</a>
+            <a href="#">Phim mới</a>
+            <a href="#">Xem nhiều</a>
+            <a href="#">Phim ngắn</a>
+            <a href="#">Giới thiệu</a>
+        </div>
+    </div>
+
+    <!-- ===== CONTENT ===== -->
+    <div id="content">
+
+        <!-- Left Content: danh sách video -->
+        <div id="left-content">
+            <div class="list-header">
+                <h2>Danh sách phim</h2>
+                <select id="sortSelect" aria-label="Sắp xếp">
+                    <option value="new">Mới cập nhật</option>
+                    <option value="views">Xem nhiều nhất</option>
+                </select>
+            </div>
+
+            <ul id="videoList">
+                <li class="video-item active" data-type="video"
+                    data-src="https://upload.wikimedia.org/wikipedia/commons/transcoded/c/c0/Big_Buck_Bunny_4K.webm/Big_Buck_Bunny_4K.webm.720p.vp9.webm"
+                    data-views="15230" data-date="2026-10-01"
+                    data-desc="Chú thỏ khổng lồ hiền lành dạy cho ba con gặm nhấm tinh nghịch một bài học nhớ đời.">
+                    <a href="#">
+                        <img src="https://img.youtube.com/vi/aqz-KE-bpKQ/mqdefault.jpg" alt="Big Buck Bunny">
+                        <div class="item-info">
+                            <span class="item-title">Big Buck Bunny - Chú thỏ khổng lồ</span>
+                            <span class="item-meta">10:34 &middot; 15.230 lượt xem</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="video-item" data-type="youtube" data-src="WhWc3b3KhnY"
+                    data-views="9870" data-date="2026-09-28"
+                    data-desc="Cô bé chăn cừu Spring và chú chó trung thành bước vào hành trình đánh thức mùa xuân.">
+                    <a href="#">
+                        <img src="https://img.youtube.com/vi/WhWc3b3KhnY/mqdefault.jpg" alt="Spring">
+                        <div class="item-info">
+                            <span class="item-title">Spring - Mùa xuân thức giấc</span>
+                            <span class="item-meta">7:44 &middot; 9.870 lượt xem</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="video-item" data-type="youtube" data-src="Z4C82eyhwgU"
+                    data-views="21450" data-date="2026-09-20"
+                    data-desc="Chú lạc đà Koro tìm mọi cách vượt qua hàng rào để ăn đám cỏ xanh bên kia đường.">
+                    <a href="#">
+                        <img src="https://img.youtube.com/vi/Z4C82eyhwgU/mqdefault.jpg" alt="Caminandes 2">
+                        <div class="item-info">
+                            <span class="item-title">Caminandes 2 - Lạc đà Koro</span>
+                            <span class="item-meta">2:26 &middot; 21.450 lượt xem</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="video-item" data-type="youtube" data-src="SkVqJ1SGeL0"
+                    data-views="18320" data-date="2026-09-15"
+                    data-desc="Koro gặp chú chim cánh cụt Oti và hai bạn học cách trở thành bạn bè.">
+                    <a href="#">
+                        <img src="https://img.youtube.com/vi/SkVqJ1SGeL0/mqdefault.jpg" alt="Caminandes 3">
+                        <div class="item-info">
+                            <span class="item-title">Caminandes 3 - Những người bạn</span>
+                            <span class="item-meta">2:30 &middot; 18.320 lượt xem</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="video-item" data-type="youtube" data-src="mN0zPOpADL4"
+                    data-views="7640" data-date="2026-09-05"
+                    data-desc="Điệp viên Agent 327 vào vai thợ cắt tóc trong một nhiệm vụ đầy hài hước.">
+                    <a href="#">
+                        <img src="https://img.youtube.com/vi/mN0zPOpADL4/mqdefault.jpg" alt="Agent 327">
+                        <div class="item-info">
+                            <span class="item-title">Agent 327 - Tiệm cắt tóc bí ẩn</span>
+                            <span class="item-meta">3:51 &middot; 7.640 lượt xem</span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <p id="noResult" class="no-result">Không tìm thấy phim phù hợp.</p>
+        </div>
+
+        <!-- Right Content: khu vực xem video -->
+        <div id="right-content">
+            <div class="player">
+                <!-- Video mặc định: video đầu tiên trong danh sách, phát bằng thẻ <video> -->
+                <video id="videoPlayer" controls preload="metadata"
+                       poster="https://img.youtube.com/vi/aqz-KE-bpKQ/maxresdefault.jpg">
+                    <source src="https://upload.wikimedia.org/wikipedia/commons/transcoded/c/c0/Big_Buck_Bunny_4K.webm/Big_Buck_Bunny_4K.webm.720p.vp9.webm" type="video/webm">
+                    <source src="https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/720/Big_Buck_Bunny_720_10s_1MB.mp4" type="video/mp4">
+                    Trình duyệt của bạn không hỗ trợ thẻ video.
+                </video>
+                <!-- Video YouTube nhúng bằng thẻ <iframe> (ẩn cho tới khi chọn) -->
+                <iframe id="youtubePlayer" class="hidden" title="Trình phát YouTube"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+            </div>
+            <h1 id="videoTitle">Big Buck Bunny - Chú thỏ khổng lồ</h1>
+            <p class="video-meta"><span id="videoViews">15.230</span> lượt xem &middot; HD 720p &middot; Không quảng cáo</p>
+            <p id="videoDesc" class="video-desc">Chú thỏ khổng lồ hiền lành dạy cho ba con gặm nhấm tinh nghịch một bài học nhớ đời.</p>
+        </div>
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <div id="footer">
+        <p>&copy; 2026 KidsToon - Website phim hoạt hình dành cho thiếu nhi.</p>
+        <p class="credit">Phim minh họa: Blender Foundation (giấy phép Creative Commons). Bài tập thực hành HTML/CSS.</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
