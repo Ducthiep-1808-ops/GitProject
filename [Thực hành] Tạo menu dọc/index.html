@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu dropdown dọc</title>
+    <style>
+        /* Đặt font chữ và bỏ căn lề mặc định để các trình duyệt hiển thị giống nhau */
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+        }
+        ul, li {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Các phần tử (mục chọn) của menu */
+        li {
+            list-style: none;      /* bỏ bullet đầu dòng */
+            position: relative;    /* làm mốc cho danh sách con */
+            width: 100px;
+            height: 30px;
+            padding: 0 20px;
+            background-color: black;
+            line-height: 30px;
+            cursor: pointer;
+        }
+
+        /* Liên kết trong menu */
+        li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        /* Đổi màu nền khi đưa chuột qua mục chọn */
+        li:hover {
+            background-color: gray;
+        }
+
+        /* Danh sách con: đặt cạnh mục cha và ẩn đi
+           (li rộng 100px + 2 x 20px padding = 140px, nên đặt left: 140px
+           để menu con nằm sát mục cha, không có khoảng hở làm mất hover) */
+        ul ul {
+            position: absolute;
+            top: 0;
+            left: 140px;
+            visibility: hidden;
+        }
+
+        /* Hiện danh sách con khi đưa chuột vào mục cha */
+        li:hover > ul {
+            visibility: visible;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="menu">
+        <ul>
+            <li><a href="#">Trang chủ</a></li>
+            <li><a href="#">Sản phẩm &raquo;</a>
+                <ul>
+                    <li><a href="#">Điện thoại</a></li>
+                    <li><a href="#">Laptop &raquo;</a>
+                        <ul>
+                            <li><a href="#">Dell</a></li>
+                            <li><a href="#">Asus</a></li>
+                            <li><a href="#">MacBook</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Phụ kiện</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Dịch vụ &raquo;</a>
+                <ul>
+                    <li><a href="#">Bảo hành</a></li>
+                    <li><a href="#">Sửa chữa</a></li>
+                    <li><a href="#">Giao hàng</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Tin tức</a></li>
+            <li><a href="#">Liên hệ</a></li>
+        </ul>
+    </div>
+
+</body>
+</html>
