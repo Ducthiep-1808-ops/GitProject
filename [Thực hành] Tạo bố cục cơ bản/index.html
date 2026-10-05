@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bố cục cơ bản - CodeGym Academy</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="main">
+
+    <!-- HEAD: logo + banner -->
+    <div id="head">
+        <div class="logo">
+            <span class="logo-mark">CG</span>
+            <span class="logo-text">CodeGym<br><small>Academy</small></span>
+        </div>
+        <div class="banner">
+            <h1>Học lập trình - Thay đổi tương lai</h1>
+            <p>Đào tạo lập trình viên chuyên nghiệp theo mô hình Coding Bootcamp</p>
+        </div>
+    </div>
+
+    <!-- HEAD-LINK: liên kết đầu trang -->
+    <div id="head-link">
+        <a href="#" class="active">Home</a>
+        <a href="#">Students</a>
+        <a href="#">Course</a>
+        <a href="#">Teachers</a>
+        <a href="#">News</a>
+        <a href="#">Contact</a>
+    </div>
+
+    <!-- LEFT: liên kết bên trái -->
+    <div id="left">
+        <h3>Danh mục</h3>
+        <ul>
+            <li><a href="#">Giới thiệu</a></li>
+            <li><a href="#">Chương trình học</a></li>
+            <li><a href="#">Lịch khai giảng</a></li>
+            <li><a href="#">Học phí</a></li>
+            <li><a href="#">Học viên tiêu biểu</a></li>
+            <li><a href="#">Tuyển dụng</a></li>
+            <li><a href="#">Hỏi đáp</a></li>
+        </ul>
+        <h3>Khóa học</h3>
+        <ul>
+            <li><a href="#">Java Web Fullstack</a></li>
+            <li><a href="#">PHP &amp; Laravel</a></li>
+            <li><a href="#">Front-end</a></li>
+            <li><a href="#">Python cơ bản</a></li>
+        </ul>
+    </div>
+
+    <!-- RIGHT: lịch, biểu đồ, bản đồ -->
+    <div id="right">
+        <div class="box">
+            <h3>Lịch tháng 10/2026</h3>
+            <table class="calendar">
+                <tr><th>T2</th><th>T3</th><th>T4</th><th>T5</th><th>T6</th><th>T7</th><th>CN</th></tr>
+                <tr><td></td><td></td><td></td><td>1</td><td>2</td><td>3</td><td>4</td></tr>
+                <tr><td class="today">5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td></tr>
+                <tr><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td></tr>
+                <tr><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td></tr>
+                <tr><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td><td>31</td><td></td></tr>
+            </table>
+        </div>
+        <div class="box">
+            <h3>Học viên theo khóa</h3>
+            <div class="chart">
+                <div class="bar" style="height: 90%"><span>Java</span></div>
+                <div class="bar" style="height: 65%"><span>PHP</span></div>
+                <div class="bar" style="height: 75%"><span>FE</span></div>
+                <div class="bar" style="height: 40%"><span>Py</span></div>
+            </div>
+        </div>
+        <div class="box">
+            <h3>Bản đồ</h3>
+            <iframe class="map" title="Bản đồ Hà Nội"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=105.74%2C21.00%2C105.80%2C21.05&amp;layer=mapnik"></iframe>
+            <a class="map-link" href="https://www.openstreetmap.org/#map=14/21.025/105.77" target="_blank" rel="noopener">Xem bản đồ lớn hơn &raquo;</a>
+        </div>
+    </div>
+
+    <!-- CONTENT: nội dung chính -->
+    <div id="content">
+        <div class="hot-news">
+            <h2>Hot news</h2>
+            <p><strong>Khai giảng lớp Java Web Fullstack tháng 11/2026</strong> - Đăng ký trước ngày 31/10 để nhận ưu đãi học phí và tham gia buổi học thử miễn phí.</p>
+        </div>
+
+        <div class="photo-slide">
+            <h2>Photo Slide</h2>
+            <div class="slides">
+                <figure><img src="https://picsum.photos/seed/codegym1/400/260" alt="Lớp học lập trình"><figcaption>Lớp học</figcaption></figure>
+                <figure><img src="https://picsum.photos/seed/codegym2/400/260" alt="Hoạt động ngoại khóa"><figcaption>Ngoại khóa</figcaption></figure>
+                <figure><img src="https://picsum.photos/seed/codegym3/400/260" alt="Lễ tốt nghiệp"><figcaption>Tốt nghiệp</figcaption></figure>
+            </div>
+        </div>
+
+        <div class="news-list">
+            <div class="news">
+                <h3>News 1</h3>
+                <p>Học viên CodeGym đạt giải nhất cuộc thi Hackathon dành cho sinh viên năm 2026.</p>
+                <a href="#">Xem thêm &raquo;</a>
+            </div>
+            <div class="news">
+                <h3>News 2</h3>
+                <p>Ngày hội việc làm Hiring Day quy tụ hơn 30 doanh nghiệp công nghệ.</p>
+                <a href="#">Xem thêm &raquo;</a>
+            </div>
+            <div class="news">
+                <h3>News 3</h3>
+                <p>Workshop "Viết CV cho lập trình viên" miễn phí vào cuối tuần này.</p>
+                <a href="#">Xem thêm &raquo;</a>
+            </div>
+            <div class="news">
+                <h3>News 4</h3>
+                <p>Ra mắt khóa học Python cơ bản dành cho học sinh phổ thông.</p>
+                <a href="#">Xem thêm &raquo;</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER: thông tin chủ sở hữu và liên kết -->
+    <div id="footer">
+        <p><strong>CodeGym Academy</strong> - Bài thực hành tạo bố cục cơ bản bằng DIV và CSS</p>
+        <p>
+            <a href="#">Giới thiệu</a> |
+            <a href="#">Chính sách</a> |
+            <a href="#">Liên hệ</a> |
+            <a href="#">Sơ đồ trang</a>
+        </p>
+        <p>&copy; 2026 - Mọi quyền được bảo lưu.</p>
+    </div>
+
+</div>
+</body>
+</html>
