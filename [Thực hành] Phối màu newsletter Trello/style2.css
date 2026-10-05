@@ -1,0 +1,19 @@
+/*
+ * PHIÊN BẢN 2 - "Trello Professional"
+ * Adobe Color - quy tắc: Bổ túc (Complementary)
+ * Màu gốc: xanh navy trầm #1F3A5F, màu bổ túc là cam hổ phách #F2A541
+ * => cảm giác trầm, chuyên nghiệp, ấm áp; cam chỉ dùng làm điểm nhấn.
+ */
+:root {
+    --primary-color: #1F3A5F;        /* xanh navy - màu chủ đạo */
+    --darker-primary-color: #142840; /* navy đậm hơn - hover nút */
+    --secondary-color: #4A6274;      /* xám xanh */
+    --accent-color: #F2A541;         /* cam hổ phách - màu bổ túc */
+    --text-color: #2B2B2B;           /* chữ chính - xám than */
+    --light-bg-color: #F5EFE6;       /* nền kem */
+    --white-color: #FFFFFF;
+
+    --on-primary-color: #FFFFFF;     /* tương phản 11.48:1 */
+    --on-secondary-color: #FFFFFF;   /* tương phản 6.38:1 */
+    --on-accent-color: #1F1F1F;      /* chữ tối trên nền cam - 8.03:1 */
+}
