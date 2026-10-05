@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+}
+
+h1 {
+    margin: 0;
+    padding: 24px 16px;
+    background-color: #2B579A;
+    color: white;
+}
+
+/* nav: khối block chiếm trọn một dòng */
+nav {
+    display: block;
+    padding: 12px 0;
+    background-color: #E8EEF7;
+}
+
+/* các liên kết inline-block nằm cạnh nhau, vẫn đặt được padding */
+nav a {
+    display: inline-block;
+    margin: 0 15px;
+    padding: 6px 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+nav a:hover {
+    background-color: #2B579A;
+    color: white;
+}
+
+/* section: block, giới hạn độ rộng bằng max-width và căn giữa */
+section {
+    display: block;
+    max-width: 1000px;
+    margin: 20px auto 0;
+    padding: 0 10px;
+}
+
+/* 3 cột inline-block */
+.box {
+    display: inline-block;
+    width: 30%;
+    padding: 20px;
+    background-color: lightblue;
+    margin: 10px;
+    box-sizing: border-box;   /* tính padding vào 30% để 3 cột vừa một hàng */
+    vertical-align: top;      /* các cột thẳng hàng ở mép trên */
+    text-align: left;
+}
+
+.box h2 {
+    margin-top: 0;
+}
+
+footer {
+    display: block;
+    margin-top: 20px;
+    padding: 12px;
+    background-color: #333;
+    color: white;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* màn hình nhỏ: mỗi cột chiếm trọn một hàng */
+@media (max-width: 700px) {
+    .box {
+        display: block;
+        width: auto;
+    }
+}
