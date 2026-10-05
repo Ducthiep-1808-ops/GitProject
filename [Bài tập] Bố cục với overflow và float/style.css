@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+/* overflow: hidden giúp khối cha bao trọn các cột float bên trong */
+.container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.left-column {
+    width: 50%;
+    float: left;
+    background-color: lightgray;
+    padding: 20px;
+}
+
+.right-column {
+    width: 50%;
+    float: right;
+    background-color: lightgreen;
+    padding: 20px;
+}
+
+.left-column h2,
+.right-column h2 {
+    margin-top: 0;
+}
+
+/* clear: both để khối luôn nằm bên dưới các cột float;
+   overflow: auto hiện thanh cuộn khi nội dung quá dài */
+.overflow-box {
+    clear: both;
+    margin-top: 20px;
+    width: 300px;
+    height: 100px;
+    background-color: lightcoral;
+    padding: 10px;
+    overflow: auto;
+}
+
+.overflow-box p {
+    margin: 0 0 10px;
+}
+
+/* Thanh cuộn luôn hiển thị (macOS mặc định ẩn thanh cuộn khi không cuộn) */
+.overflow-box::-webkit-scrollbar {
+    width: 10px;
+}
+.overflow-box::-webkit-scrollbar-thumb {
+    background-color: #a33;
+    border-radius: 5px;
+}
