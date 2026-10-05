@@ -1,0 +1,149 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #F2F4F8;
+}
+
+/* header: phần đầu trang */
+header {
+    padding: 30px 20px;
+    text-align: center;
+    background-color: #2B579A;
+    color: white;
+}
+header h1 {
+    margin: 0;
+    font-size: 32px;
+}
+header p {
+    margin: 6px 0 0;
+    color: #D6E2F5;
+}
+
+/* nav: thanh điều hướng */
+nav {
+    background-color: #1E3F73;
+}
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+nav a {
+    display: block;
+    padding: 12px 20px;
+    color: white;
+    text-decoration: none;
+}
+nav a:hover,
+nav a.active {
+    background-color: #F0A830;
+    color: #1E3F73;
+}
+
+/* Khung chứa section + aside */
+.container {
+    display: flex;
+    gap: 20px;
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+/* section: nội dung chính */
+section {
+    flex: 3;
+}
+section > h2,
+aside h2 {
+    margin-top: 0;
+    color: #2B579A;
+}
+
+/* article: từng bài viết */
+article {
+    padding: 16px 20px;
+    margin-bottom: 16px;
+    background-color: white;
+    border-radius: 6px;
+    border-left: 4px solid #2B579A;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+article h3 {
+    margin: 0;
+    color: #1E3F73;
+}
+article .meta {
+    margin: 4px 0 10px;
+    font-size: 13px;
+    color: #888;
+}
+article code {
+    padding: 1px 4px;
+    background-color: #EEF1F6;
+    border-radius: 3px;
+    font-size: 13px;
+}
+.read-more {
+    color: #2B579A;
+    font-weight: bold;
+    text-decoration: none;
+}
+.read-more:hover {
+    text-decoration: underline;
+}
+
+/* aside: nội dung phụ (sidebar) */
+aside {
+    flex: 1;
+    align-self: flex-start;
+    padding: 16px 20px;
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+aside h2 {
+    font-size: 20px;
+}
+aside ul {
+    padding-left: 18px;
+}
+aside a {
+    color: #2B579A;
+    text-decoration: none;
+}
+aside a:hover {
+    text-decoration: underline;
+}
+
+/* footer: phần cuối trang */
+footer {
+    padding: 16px 20px;
+    text-align: center;
+    background-color: #1E3F73;
+    color: #D6E2F5;
+}
+footer p {
+    margin: 0;
+}
+
+/* Responsive: màn hình nhỏ thì aside xuống dưới section */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    aside {
+        align-self: stretch;
+    }
+    header h1 {
+        font-size: 26px;
+    }
+}
