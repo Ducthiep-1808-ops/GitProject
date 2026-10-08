@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f2f5;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header */
+.header {
+    background-color: #1e3a5f;
+    color: white;
+    text-align: center;
+    padding: 25px 20px;
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+/* Navigation */
+.nav {
+    display: flex;
+    justify-content: center;
+    background-color: #2d5486;
+}
+
+.nav a {
+    padding: 14px 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.nav a:hover {
+    background-color: #f39c12;
+}
+
+/* Sidebar + Main Content */
+.main-container {
+    display: flex;
+    flex: 1;
+    gap: 20px;
+    padding: 20px;
+}
+
+.sidebar {
+    flex: 1;
+    background-color: white;
+    padding: 20px;
+}
+
+.sidebar h3,
+.content h2 {
+    margin-bottom: 10px;
+}
+
+.sidebar ul {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.sidebar a {
+    color: #1e3a5f;
+}
+
+.ads {
+    background-color: #fde3c2;
+    text-align: center;
+    padding: 50px 10px;
+}
+
+.content {
+    flex: 3;
+    background-color: white;
+    padding: 20px;
+}
+
+/* Các thẻ bài viết: 3 thẻ mỗi hàng, tự xuống dòng */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.card {
+    flex: 1 1 calc(33.333% - 10px);
+    background-color: #e8f0fb;
+    padding: 15px;
+    border-left: 4px solid #2d5486;
+}
+
+/* Footer */
+.footer {
+    background-color: #1e3a5f;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Tablet: 2 thẻ mỗi hàng */
+@media (max-width: 992px) {
+    .card {
+        flex-basis: calc(50% - 8px);
+    }
+}
+
+/* Mobile: tất cả xếp dọc */
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .main-container {
+        flex-direction: column;
+    }
+
+    /* Nội dung chính hiển thị trước sidebar */
+    .content {
+        order: 1;
+    }
+
+    .sidebar {
+        order: 2;
+    }
+
+    .card {
+        flex-basis: 100%;
+    }
+}
