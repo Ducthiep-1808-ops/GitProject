@@ -1,0 +1,61 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+h2 {
+    margin-top: 30px;
+}
+
+/* Nền xám để thấy rõ khoảng cách giữa các hàng */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: #ddd;
+    padding: 10px;
+}
+
+.grid-container div {
+    background-color: lightblue;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #555;
+}
+
+/* 1. length */
+.example-length {
+    grid-row-gap: 20px;
+}
+
+/* 2. percentage */
+.example-percent {
+    grid-row-gap: 5%;
+    height: 400px;
+}
+
+.example-percent div {
+    background-color: lightgreen;
+}
+
+/* 3. global-values */
+.example-initial {
+    grid-row-gap: initial;
+}
+
+.parent {
+    grid-row-gap: 40px;
+}
+
+.example-inherit {
+    grid-row-gap: inherit;
+}
+
+.example-unset {
+    grid-row-gap: unset;
+}
+
+.example-initial div,
+.example-inherit div,
+.example-unset div {
+    background-color: lightsalmon;
+}
