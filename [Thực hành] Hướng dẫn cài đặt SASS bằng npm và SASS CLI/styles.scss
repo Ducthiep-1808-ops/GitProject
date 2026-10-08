@@ -1,0 +1,21 @@
+// Mục 6: file SCSS đơn, biên dịch bằng: sass styles.scss styles.css
+$primary-color: #9b59b6;
+$text-color: #333;
+$radius: 8px;
+
+body {
+  font-family: Arial, sans-serif;
+  color: $text-color;
+  padding: 30px;
+}
+
+.box {
+  background: $primary-color;
+  color: white;
+  padding: 20px;
+  border-radius: $radius;
+
+  h2 {
+    margin-top: 0;
+  }
+}

@@ -1,0 +1,9 @@
+// Mục 8: biên dịch cả thư mục bằng: sass scss/:css/
+@use "variables" as *;
+
+.home-banner {
+  background: $primary-color;
+  color: white;
+  padding: 40px;
+  border-radius: $radius;
+}

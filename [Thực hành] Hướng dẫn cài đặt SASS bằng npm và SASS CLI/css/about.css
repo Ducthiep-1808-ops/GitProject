@@ -1,0 +1,11 @@
+.about-card {
+  border: 2px solid #2ecc71;
+  padding: 20px;
+  border-radius: 12px;
+}
+.about-card:hover {
+  background: #2ecc71;
+  color: white;
+}
+
+/*# sourceMappingURL=about.css.map */
