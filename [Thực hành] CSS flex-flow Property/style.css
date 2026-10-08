@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+h2 {
+    margin-top: 30px;
+}
+
+/* 1. row nowrap */
+.container-1 {
+    display: flex;
+    flex-flow: row nowrap;
+    background-color: #f1f1f1;
+}
+
+.container-1 > div {
+    background-color: #007bff;
+    color: white;
+    width: 100px;
+    margin: 10px;
+    text-align: center;
+    line-height: 50px;
+}
+
+/* 2. row-reverse nowrap */
+.container-2 {
+    display: flex;
+    flex-flow: row-reverse nowrap;
+    background-color: #f1f1f1;
+}
+
+.container-2 > div {
+    background-color: #28a745;
+    color: white;
+    width: 100px;
+    margin: 10px;
+    text-align: center;
+    line-height: 50px;
+}
