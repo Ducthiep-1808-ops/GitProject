@@ -1,0 +1,4 @@
+/* Bootstrap 5 không có lớp display: contents nên bổ sung một lớp nhỏ */
+.d-contents {
+    display: contents;
+}

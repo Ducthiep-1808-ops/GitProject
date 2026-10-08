@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova X - Giới thiệu sản phẩm</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark py-2">
+        <div class="container">
+            <a class="navbar-brand fw-semibold" href="#"><i class="fas fa-mobile-screen-button"></i> NovaTech</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav mx-auto small">
+                    <li class="nav-item"><a class="nav-link px-3" href="#overview">Tổng quan</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#features">Tính năng</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#specs">Thông số</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#buy">Mua</a></li>
+                </ul>
+                <div class="d-flex gap-3 text-white-50">
+                    <i class="fas fa-magnifying-glass"></i>
+                    <i class="fas fa-bag-shopping"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Thanh sản phẩm phụ -->
+    <div class="border-bottom bg-white sticky-top">
+        <div class="container d-flex justify-content-between align-items-center py-2">
+            <span class="fw-semibold fs-5">Nova X</span>
+            <a href="#buy" class="btn btn-primary btn-sm rounded-pill px-3">Mua</a>
+        </div>
+    </div>
+
+    <!-- Hero -->
+    <section id="overview" class="bg-light text-center pt-5">
+        <div class="container pt-4">
+            <p class="text-warning fw-semibold mb-1">Mới</p>
+            <h1 class="display-3 fw-bold">Nova X</h1>
+            <p class="fs-3 text-secondary mb-3">Mạnh mẽ. Tinh tế. Vượt trội.</p>
+            <p class="mb-4">Từ 24.990.000đ hoặc 2.083.000đ/tháng trong 12 tháng</p>
+            <div class="d-flex justify-content-center gap-3 mb-5">
+                <a href="#buy" class="btn btn-primary rounded-pill px-4">Mua ngay</a>
+                <a href="#features" class="btn btn-outline-primary rounded-pill px-4">Tìm hiểu thêm <i class="fas fa-chevron-right small"></i></a>
+            </div>
+        </div>
+        <img src="images/hero.jpg" class="img-fluid w-100" alt="Điện thoại Nova X">
+    </section>
+
+    <!-- Màu sắc -->
+    <section class="py-5 text-center">
+        <div class="container">
+            <h2 class="fw-bold mb-4">Bốn màu sắc tuyệt đẹp</h2>
+            <div class="d-flex justify-content-center align-items-center gap-4 flex-wrap">
+                <div class="d-flex flex-column align-items-center">
+                    <span class="rounded-circle bg-dark border p-4 mb-2"></span>
+                    <small>Đen Không Gian</small>
+                </div>
+                <div class="d-flex flex-column align-items-center">
+                    <span class="rounded-circle bg-light border p-4 mb-2"></span>
+                    <small>Trắng Ngọc Trai</small>
+                </div>
+                <div class="d-flex flex-column align-items-center">
+                    <span class="rounded-circle bg-primary border p-4 mb-2"></span>
+                    <small>Xanh Thái Bình Dương</small>
+                </div>
+                <div class="d-flex flex-column align-items-center">
+                    <span class="rounded-circle bg-warning border p-4 mb-2"></span>
+                    <small>Vàng Sa Mạc</small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tính năng nổi bật -->
+    <section id="features" class="bg-dark text-white py-5">
+        <div class="container py-4">
+            <h2 class="display-6 fw-bold text-center mb-5">Điểm nổi bật</h2>
+            <div class="row g-4">
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="h-100 bg-secondary bg-opacity-25 rounded-4 p-4 d-flex flex-column align-items-start">
+                            <i class="fas fa-camera fs-1 text-info mb-3"></i>
+                            <h5 class="fw-semibold">Camera 48MP</h5>
+                            <p class="text-white-50 mb-0">Ảnh sắc nét đến từng chi tiết, kể cả trong điều kiện thiếu sáng.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="h-100 bg-secondary bg-opacity-25 rounded-4 p-4 d-flex flex-column align-items-start">
+                            <i class="fas fa-microchip fs-1 text-warning mb-3"></i>
+                            <h5 class="fw-semibold">Chip N3 Pro</h5>
+                            <p class="text-white-50 mb-0">Hiệu năng nhanh hơn 30% và tiết kiệm điện hơn thế hệ trước.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="h-100 bg-secondary bg-opacity-25 rounded-4 p-4 d-flex flex-column align-items-start">
+                            <i class="fas fa-battery-full fs-1 text-success mb-3"></i>
+                            <h5 class="fw-semibold">Pin cả ngày</h5>
+                            <p class="text-white-50 mb-0">Xem video liên tục đến 29 giờ, sạc nhanh 50% trong 30 phút.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="h-100 bg-secondary bg-opacity-25 rounded-4 p-4 d-flex flex-column align-items-start">
+                            <i class="fas fa-shield-halved fs-1 text-danger mb-3"></i>
+                            <h5 class="fw-semibold">Bền bỉ</h5>
+                            <p class="text-white-50 mb-0">Khung titan, mặt kính cường lực và chống nước IP68.</p>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Giới thiệu: ảnh + nội dung -->
+    <section class="py-5">
+        <div class="container py-4">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <img src="images/lifestyle.jpg" class="img-fluid rounded-4 shadow" alt="Nova X trong công việc">
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="display-6 fw-bold mb-3">Làm việc và giải trí trọn vẹn</h2>
+                    <p class="text-secondary fs-5">Nova X kết nối liền mạch với máy tính, tai nghe và đồng hồ thông minh,
+                        giúp bạn chuyển đổi công việc giữa các thiết bị chỉ trong một chạm.</p>
+                    <ul class="list-unstyled mt-4">
+                        <li class="d-flex align-items-center mb-3"><i class="fas fa-circle-check text-primary me-3 fs-5"></i> Màn hình 6,1 inch, 120Hz</li>
+                        <li class="d-flex align-items-center mb-3"><i class="fas fa-circle-check text-primary me-3 fs-5"></i> Kết nối 5G và Wi-Fi 7</li>
+                        <li class="d-flex align-items-center"><i class="fas fa-circle-check text-primary me-3 fs-5"></i> Cổng USB-C tốc độ cao</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Thông số kỹ thuật -->
+    <section id="specs" class="bg-light py-5">
+        <div class="container py-4">
+            <h2 class="display-6 fw-bold text-center mb-5">Chọn phiên bản dành cho bạn</h2>
+            <div class="row g-4 justify-content-center">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="bg-white rounded-4 shadow-sm p-4 h-100 text-center">
+                        <h4 class="fw-bold">Nova X</h4>
+                        <p class="text-secondary">Từ 24.990.000đ</p>
+                        <hr>
+                        <div class="d-flex justify-content-between py-2"><span><i class="fas fa-mobile-screen me-2 text-secondary"></i>Màn hình</span><strong>6,1"</strong></div>
+                        <div class="d-flex justify-content-between py-2"><span><i class="fas fa-camera me-2 text-secondary"></i>Camera</span><strong>48MP kép</strong></div>
+                        <div class="d-flex justify-content-between py-2"><span><i class="fas fa-hard-drive me-2 text-secondary"></i>Bộ nhớ</span><strong>128GB</strong></div>
+                        <div class="d-flex justify-content-between py-2"><span><i class="fas fa-battery-full me-2 text-secondary"></i>Pin</span><strong>Đến 22 giờ</strong></div>
+                        <a href="#buy" class="btn btn-outline-primary rounded-pill px-4 mt-3">Chọn</a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="bg-white rounded-4 shadow-sm p-4 h-100 text-center border border-primary">
+                        <span class="badge bg-primary mb-2">Phổ biến nhất</span>
+                        <h4 class="fw-bold">Nova X Pro</h4>
+                        <p class="text-secondary">Từ 30.990.000đ</p>
+                        <hr>
+                        <div class="d-flex justify-content-between py-2"><span><i class="fas fa-mobile-screen me-2 text-secondary"></i>Màn hình</span><strong>6,7"</strong></div>
+                        <div class="d-flex justify-content-between py-2"><span><i class="fas fa-camera me-2 text-secondary"></i>Camera</span><strong>48MP ba ống kính</strong></div>
+                        <div class="d-flex justify-content-between py-2"><span><i class="fas fa-hard-drive me-2 text-secondary"></i>Bộ nhớ</span><strong>256GB</strong></div>
+                        <div class="d-flex justify-content-between py-2"><span><i class="fas fa-battery-full me-2 text-secondary"></i>Pin</span><strong>Đến 29 giờ</strong></div>
+                        <a href="#buy" class="btn btn-primary rounded-pill px-4 mt-3">Chọn</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dịch vụ: Flexbox + justify-content.
+         Các nhóm .d-contents không tạo hộp riêng, nên 4 mục đều là flex item của cùng một hàng -->
+    <section class="py-5">
+        <div class="container">
+            <div class="d-flex flex-wrap justify-content-around align-items-center gap-4 text-center">
+                <div class="d-contents">
+                    <div class="d-flex flex-column align-items-center">
+                        <i class="fas fa-truck-fast fs-2 text-primary mb-2"></i>
+                        <p class="small mb-0">Giao hàng miễn phí</p>
+                    </div>
+                    <div class="d-flex flex-column align-items-center">
+                        <i class="fas fa-rotate-left fs-2 text-primary mb-2"></i>
+                        <p class="small mb-0">Đổi trả trong 14 ngày</p>
+                    </div>
+                </div>
+                <div class="d-contents">
+                    <div class="d-flex flex-column align-items-center">
+                        <i class="fas fa-credit-card fs-2 text-primary mb-2"></i>
+                        <p class="small mb-0">Trả góp 0%</p>
+                    </div>
+                    <div class="d-flex flex-column align-items-center">
+                        <i class="fas fa-headset fs-2 text-primary mb-2"></i>
+                        <p class="small mb-0">Hỗ trợ 24/7</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="buy" class="bg-primary text-white text-center py-5">
+        <div class="container py-3">
+            <h2 class="display-6 fw-bold">Sở hữu Nova X ngay hôm nay</h2>
+            <p class="fs-5 mb-4">Thu cũ đổi mới, tiết kiệm đến 5.000.000đ.</p>
+            <a href="#" class="btn btn-light btn-lg rounded-pill px-5"><i class="fas fa-bag-shopping"></i> Mua ngay</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white-50 py-4 small">
+        <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+            <p class="mb-0">&copy; 2024 NovaTech. Bài tập Bootstrap, sản phẩm mang tính minh hoạ.</p>
+            <div class="d-flex gap-3 fs-5">
+                <a href="#" class="text-white-50"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="text-white-50"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-white-50"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
