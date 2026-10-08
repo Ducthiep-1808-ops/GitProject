@@ -1,0 +1,14 @@
+@use "sass:math";
+@use "variables" as *;
+
+// Độ rộng cột theo số cột chiếm trong lưới 12 cột
+@mixin column-width($span) {
+  width: math.percentage(math.div($span, $grid-columns));
+}
+
+// Khối màu chiếm toàn bộ chiều rộng, không viền
+@mixin color-block($color) {
+  background-color: $color;
+  border: none;
+  width: 100%;
+}

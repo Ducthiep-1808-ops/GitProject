@@ -1,0 +1,49 @@
+@use "../abstracts" as *;
+
+// Lớp bố cục nằm đè lên lưới hướng dẫn
+.layout {
+  position: absolute;
+  opacity: $layout-opacity;
+  width: auto;
+  left: 8px;
+  right: 10px;
+}
+
+.header {
+  background: $color-header;
+  border-right-color: transparent;
+}
+
+.footer {
+  background: $color-footer;
+  border-right-color: transparent;
+}
+
+// Các ô trống ở giữa hàng nội dung
+.spacer {
+  background-color: $color-white;
+  border: none;
+}
+
+.sidebar {
+  background-color: $color-white;
+  border: none;
+  padding-top: $sidebar-padding-top;
+
+  // Sidebar trái: 4 thanh ngang
+  &__item {
+    @include color-block($color-accent);
+    height: 15%;
+    margin-bottom: $sidebar-item-gap;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  // Sidebar phải: 1 khối lớn
+  &__box {
+    @include color-block($color-accent);
+    height: 92%;
+  }
+}

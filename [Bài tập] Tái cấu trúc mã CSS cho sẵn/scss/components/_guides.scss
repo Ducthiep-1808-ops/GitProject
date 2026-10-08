@@ -1,0 +1,15 @@
+@use "../abstracts" as *;
+
+// Lưới 12 cột mờ phía sau để thấy các đường chia cột
+.guides {
+  opacity: $guides-opacity;
+
+  .col {
+    background-color: $color-white;
+    border-right: 1px solid $color-guide-border;
+
+    &:first-child {
+      border-left: 1px solid $color-guide-border;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+@use "../abstracts" as *;
+
+// Hàng của lưới (trước đây là .gridwrapper)
+.grid-row {
+  overflow: auto;
+  position: relative;
+  height: 250px;
+
+  // Sinh .grid-row--header, .grid-row--content, ... từ map $row-heights
+  @each $name, $height in $row-heights {
+    &--#{$name} {
+      height: $height;
+    }
+  }
+}
+
+// Cột của lưới (trước đây là .gridcontent)
+.col {
+  @include column-width(1);
+  margin: 0;
+  border-right: 1px solid $color-border;
+  height: 100%;
+  float: left;
+  background-color: $color-grid-bg;
+}
+
+// Sinh .col-1 đến .col-12
+@for $i from 1 through $grid-columns {
+  .col-#{$i} {
+    @include column-width($i);
+  }
+}

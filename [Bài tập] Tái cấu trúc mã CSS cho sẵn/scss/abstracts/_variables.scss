@@ -1,0 +1,27 @@
+// Lưới
+$grid-columns: 12;
+
+// Màu sắc
+$color-header: #9933cc;
+$color-accent: #33b5e5;
+$color-footer: #0099cc;
+$color-white: #ffffff;
+$color-grid-bg: #f1f1f1;
+$color-border: grey;
+$color-guide-border: #000000;
+
+// Chiều cao từng hàng của lưới
+$row-heights: (
+  header: 90px,
+  content: 230px,
+  footer: 50px,
+  guides: 370px
+);
+
+// Khoảng cách
+$sidebar-padding-top: 15px;
+$sidebar-item-gap: 10px;
+
+// Độ mờ
+$layout-opacity: 0.9;
+$guides-opacity: 0.1;
