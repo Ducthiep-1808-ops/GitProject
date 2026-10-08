@@ -1,0 +1,9 @@
+// components/_buttons.scss
+.button {
+  @include button-style($primary-color);
+}
+
+// Tái sử dụng mixin với màu khác
+.button-secondary {
+  @include button-style($text-color);
+}
