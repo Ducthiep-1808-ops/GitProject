@@ -1,0 +1,18 @@
+@use "../abstracts" as *;
+
+// ===== Card lợi ích =====
+.benefit-card {
+  transition: transform 0.25s, box-shadow 0.25s;
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: $shadow-3;
+  }
+}
+
+.icon-circle {
+  @include circle(56px);
+  color: $white;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}

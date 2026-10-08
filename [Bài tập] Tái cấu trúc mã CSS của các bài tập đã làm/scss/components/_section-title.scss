@@ -1,0 +1,27 @@
+@use "../abstracts" as *;
+
+// ===== Tiêu đề section =====
+.section-title {
+  font-weight: $font-bold;
+  margin-bottom: 1.5rem;
+  position: relative;
+
+  &::after {
+    @include accent-underline;
+    margin-top: 12px;
+  }
+
+  &.text-center::after {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.text-center .section-title::after {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.intro-text {
+  max-width: 820px;
+}

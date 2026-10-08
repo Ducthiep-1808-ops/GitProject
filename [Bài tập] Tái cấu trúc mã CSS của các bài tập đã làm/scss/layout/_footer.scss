@@ -1,0 +1,24 @@
+@use "../abstracts" as *;
+
+// ===== Footer =====
+.footer-dark {
+  background-color: $footer-bg !important;
+}
+
+.page-footer {
+  a {
+    color: $footer-link;
+
+    &:hover {
+      color: $accent;
+    }
+  }
+
+  .social-btn {
+    background-color: $brand !important;
+
+    i {
+      color: $white;
+    }
+  }
+}

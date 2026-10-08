@@ -1,0 +1,14 @@
+@use "../abstracts" as *;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-family;
+  color: $text;
+}
+
+section[id] {
+  scroll-margin-top: $navbar-height;
+}

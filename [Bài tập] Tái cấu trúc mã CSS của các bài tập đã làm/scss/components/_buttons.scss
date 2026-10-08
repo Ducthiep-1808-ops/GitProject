@@ -1,0 +1,32 @@
+@use "../abstracts" as *;
+
+// ===== Nút =====
+.btn-accent {
+  @include button-variant($accent, $text, $accent-hover);
+  font-weight: $font-medium;
+}
+
+.btn-brand {
+  @include button-variant($brand, $white, $brand-dark);
+}
+
+// ===== Nút lên đầu trang =====
+#backToTop {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background-color: $accent;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+  z-index: 1000;
+
+  i {
+    color: $text;
+  }
+
+  &.show {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}

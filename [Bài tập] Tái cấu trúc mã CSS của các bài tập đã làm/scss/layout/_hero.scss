@@ -1,0 +1,46 @@
+@use "../abstracts" as *;
+
+// ===== Header (Hero) =====
+.hero {
+  min-height: min(100vh, $hero-max-height);
+  background: linear-gradient(135deg, $brand-dark 0%, $brand 55%, $brand-light 100%);
+
+  .mask {
+    position: relative;
+    min-height: min(100vh, $hero-max-height);
+    padding: 110px 0 60px;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+    background-size: 22px 22px;
+  }
+
+  h1 {
+    line-height: 1.25;
+  }
+
+  @include down(lg) {
+    &,
+    .mask {
+      min-height: auto;
+    }
+
+    .mask {
+      padding: 100px 0 50px;
+    }
+  }
+
+  @include down(md) {
+    .btn {
+      display: block;
+      margin: 0 0 12px;
+    }
+  }
+}
+
+.hero-card {
+  border-radius: 12px;
+}
+
+.chip {
+  @include tag($brand);
+  font-weight: $font-medium;
+}

@@ -1,0 +1,51 @@
+@use "sass:map";
+@use "variables" as *;
+
+// Media query theo tên breakpoint: @include down(lg) { ... }
+@mixin down($name) {
+  @media (max-width: map.get($breakpoints, $name)) {
+    @content;
+  }
+}
+
+// Căn giữa nội dung bằng flexbox
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Hình tròn kích thước $size, nội dung căn giữa
+@mixin circle($size) {
+  @include flex-center;
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+}
+
+// Nút màu: nền, chữ và màu nền khi hover
+@mixin button-variant($bg, $color, $hover-bg) {
+  background-color: $bg !important;
+  color: $color !important;
+
+  &:hover {
+    background-color: $hover-bg !important;
+  }
+}
+
+// Thẻ tag/chip nhỏ có nền nhạt
+@mixin tag($color) {
+  margin: 0 6px 8px 0;
+  background-color: $light-bg;
+  color: $color;
+}
+
+// Đường gạch ngang màu accent dưới tiêu đề
+@mixin accent-underline($width: 56px, $height: 4px) {
+  content: "";
+  display: block;
+  width: $width;
+  height: $height;
+  border-radius: $height * 0.5;
+  background: $accent;
+}

@@ -1,0 +1,20 @@
+@use "../abstracts" as *;
+
+// ===== Navigation =====
+.navbar {
+  transition: box-shadow 0.3s, padding 0.3s;
+
+  .nav-link {
+    font-weight: $font-medium;
+
+    &.active {
+      color: $accent !important;
+    }
+  }
+}
+
+.navbar-collapse {
+  @include down(lg) {
+    padding-bottom: 10px;
+  }
+}

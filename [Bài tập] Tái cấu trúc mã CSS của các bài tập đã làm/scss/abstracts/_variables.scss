@@ -1,0 +1,33 @@
+// ===== Bảng màu (Adobe Color - Bổ túc: chàm + hổ phách) =====
+$brand: #283593;        // chàm - màu chủ đạo (chữ trắng 10.2:1)
+$brand-dark: #1A237E;
+$brand-light: #3949AB;
+$accent: #FFB300;       // hổ phách - nút CTA (chữ tối 9.9:1)
+$accent-dark: #C77700;
+$accent-hover: #FFC233;
+$light-bg: #F3F4FB;
+$text: #212121;
+$white: #fff;
+$guarantee-bg: #FFF8E1;
+$step-line: #C5CAE9;
+$footer-bg: #1C1F3A;
+$footer-link: #E0E0E0;
+
+// ===== Font =====
+$font-family: 'Roboto', sans-serif;
+$font-medium: 500;
+$font-bold: 700;
+
+// ===== Kích thước =====
+$navbar-height: 64px;
+$hero-max-height: 820px;
+
+// ===== Đổ bóng (theo Material Design) =====
+$shadow-1: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+$shadow-3: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+// ===== Breakpoints (theo Bootstrap 4) =====
+$breakpoints: (
+  md: 767.98px,
+  lg: 991.98px
+);

@@ -1,0 +1,58 @@
+@use "../abstracts" as *;
+
+// ===== Cam kết & quy trình =====
+.guarantee {
+  background-color: $guarantee-bg;
+  border-left: 5px solid $accent;
+  color: $text;
+}
+
+.steps {
+  .col {
+    position: relative;
+
+    &:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      top: 24px;
+      left: calc(50% + 30px);
+      width: calc(100% - 60px);
+      height: 2px;
+      background: $step-line;
+    }
+  }
+
+  @include down(md) {
+    flex-direction: column;
+
+    .col {
+      display: flex;
+      align-items: center;
+      text-align: left;
+      margin-bottom: 12px;
+
+      &::after {
+        display: none;
+      }
+    }
+
+    .step-circle {
+      margin: 0 14px 0 0;
+      flex-shrink: 0;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+}
+
+.step-circle {
+  @include circle(48px);
+  background: $brand;
+  color: $white;
+  font-weight: $font-bold;
+  font-size: 1.1rem;
+  margin: 0 auto 10px;
+  box-shadow: $shadow-1;
+}

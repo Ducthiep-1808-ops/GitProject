@@ -1,0 +1,21 @@
+@use "../abstracts" as *;
+
+// ===== Tabs khóa học (phần sản phẩm nổi bật) =====
+.pills-brand .nav-link {
+  color: $brand;
+  font-weight: $font-medium;
+
+  &.active,
+  &.active:hover {
+    background-color: $brand !important;
+    color: $white !important;
+  }
+}
+
+.module-tags span {
+  @include tag($brand-dark);
+  display: inline-block;
+  border-radius: 16px;
+  padding: 2px 12px;
+  font-size: 0.85rem;
+}
