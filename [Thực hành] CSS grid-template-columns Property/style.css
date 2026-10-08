@@ -1,0 +1,34 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+h2 {
+    margin-top: 30px;
+}
+
+/* Ví dụ 1: 3 cột bằng nhau */
+.example-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.example-1 div {
+    background-color: lightblue;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Ví dụ 2: 3 cột có kích thước khác nhau */
+.example-2 {
+    display: grid;
+    grid-template-columns: 100px 200px 1fr;
+    gap: 10px;
+}
+
+.example-2 div {
+    background-color: lightgreen;
+    padding: 20px;
+    text-align: center;
+}
