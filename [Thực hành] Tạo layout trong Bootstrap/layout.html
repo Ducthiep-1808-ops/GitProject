@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="poly.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>Layout</title>
+</head>
+<body>
+<div class="container" style="height: auto">
+    <!-- Header -->
+    <header class="row">
+        <div class="shopping-mall">
+            <h1>Online shopping mall</h1>
+            <h5>The center point of the professional programming</h5>
+        </div>
+        <img class="pull-right" src="images/header-object.png"/>
+    </header>
+
+    <!-- Nav -->
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-home"></span> Trang chủ</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="main-navbar">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#"><span class="glyphicon glyphicon-list-alt"></span> Giới thiệu</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-earphone"></span> Liên hệ</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-envelope"></span> Góp ý</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-question-sign"></span> Hỏi đáp</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user"></span> Tài khoản <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Đăng nhập</a></li>
+                            <li><a href="#">Quên mật khẩu</a></li>
+                            <li><a href="#">Đăng ký thành viên</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Đăng xuất</a></li>
+                            <li><a href="#">Đổi mật khẩu</a></li>
+                            <li><a href="#">Cập nhật hồ sơ</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Đơn hàng</a></li>
+                            <li><a href="#">Hàng đã mua</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">English</a></li>
+                    <li><a href="#">Tiếng Việt</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="row">
+        <!-- Article: mỗi hàng 3 sản phẩm -->
+        <article class="col-sm-9">
+            <div class="col-sm-4 poly-prod">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">Nokia</h4>
+                    </div>
+                    <div class="panel-body">
+                        <img src="images/computer.png" height="228" width="292"/>
+                    </div>
+                    <div class="panel-footer">$ 100.25</div>
+                </div>
+            </div>
+            <div class="col-sm-4 poly-prod">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">Samsung</h4>
+                    </div>
+                    <div class="panel-body">
+                        <img src="images/computer.png" height="228" width="292"/>
+                    </div>
+                    <div class="panel-footer">$ 250.00</div>
+                </div>
+            </div>
+            <div class="col-sm-4 poly-prod">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">iPhone</h4>
+                    </div>
+                    <div class="panel-body">
+                        <img src="images/computer.png" height="228" width="292"/>
+                    </div>
+                    <div class="panel-footer">$ 999.99</div>
+                </div>
+            </div>
+            <div class="col-sm-4 poly-prod">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">Dell</h4>
+                    </div>
+                    <div class="panel-body">
+                        <img src="images/computer.png" height="228" width="292"/>
+                    </div>
+                    <div class="panel-footer">$ 650.50</div>
+                </div>
+            </div>
+            <div class="col-sm-4 poly-prod">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">HP</h4>
+                    </div>
+                    <div class="panel-body">
+                        <img src="images/computer.png" height="228" width="292"/>
+                    </div>
+                    <div class="panel-footer">$ 540.00</div>
+                </div>
+            </div>
+            <div class="col-sm-4 poly-prod">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">Asus</h4>
+                    </div>
+                    <div class="panel-body">
+                        <img src="images/computer.png" height="228" width="292"/>
+                    </div>
+                    <div class="panel-footer">$ 720.75</div>
+                </div>
+            </div>
+        </article>
+
+        <!-- Aside -->
+        <aside class="col-sm-3">
+            <!-- Giỏ hàng -->
+            <div class="poly-cart">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <img class="col-sm-5" src="images/shoppingcart.gif"/>
+                        <ul class="col-sm-7">
+                            <li>100 items</li>
+                            <li>$56.8</li>
+                            <li><a href="#">Xem giỏ hàng</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tìm kiếm -->
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <form>
+                        <input placeholder="Keywords" class="form-control"/>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Chủng loại -->
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <span class="glyphicon glyphicon-th-list"></span>
+                    <strong>Chủng Loại</strong>
+                </div>
+                <div class="list-group">
+                    <a href="#" class="list-group-item">Điện thoại di động</a>
+                    <a href="#" class="list-group-item">Máy tính xách tay</a>
+                    <a href="#" class="list-group-item">Máy tính để bàn</a>
+                    <a href="#" class="list-group-item">Quạt máy</a>
+                    <a href="#" class="list-group-item">Tivi</a>
+                    <a href="#" class="list-group-item">Tủ lạnh</a>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Footer -->
+    <footer class="panel panel-default">
+        <div class="panel-heading text-center">
+            <p>CodeGym &copy; 2017</p>
+        </div>
+    </footer>
+</div>
+</body>
+</html>
