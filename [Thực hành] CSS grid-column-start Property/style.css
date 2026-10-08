@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+h2 {
+    margin-top: 30px;
+}
+
+.grid-container {
+    display: grid;
+    gap: 10px;
+    background-color: #eee;
+    padding: 10px;
+}
+
+.grid-container div {
+    background-color: lightblue;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Item 1 được tô màu khác để dễ thấy vị trí */
+.grid-container .item1 {
+    background-color: orange;
+}
+
+/* 1. auto */
+.example-auto {
+    grid-template-columns: 100px 100px 100px;
+}
+
+.example-auto .item1 {
+    grid-column-start: auto;
+}
+
+/* 2. span n */
+.example-span {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.example-span .item1 {
+    grid-column-start: span 2;
+}
+
+/* 3. column-line */
+.example-line {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.example-line .item1 {
+    grid-column-start: 2;
+}

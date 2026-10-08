@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS grid-column-start</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>CSS | grid-column-start Property</h1>
+
+    <h2>1. auto</h2>
+    <p><code>.item1 { grid-column-start: auto; }</code></p>
+    <div class="grid-container example-auto">
+        <div class="item1">1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
+    <h2>2. span n</h2>
+    <p><code>.item1 { grid-column-start: span 2; }</code></p>
+    <div class="grid-container example-span">
+        <div class="item1">Item 1</div>
+        <div>Item 2</div>
+        <div>Item 3</div>
+        <div>Item 4</div>
+    </div>
+
+    <h2>3. column-line</h2>
+    <p><code>.item1 { grid-column-start: 2; }</code></p>
+    <div class="grid-container example-line">
+        <div class="item1">Item 1</div>
+        <div>Item 2</div>
+        <div>Item 3</div>
+        <div>Item 4</div>
+    </div>
+</body>
+</html>
