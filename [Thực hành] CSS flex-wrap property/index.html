@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS flex-wrap</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>CSS | flex-wrap property</h1>
+
+    <div class="demo-list">
+        <div class="demo">
+            <h2><code>flex-wrap: nowrap;</code></h2>
+            <p>Không xuống dòng, các Item co lại để nằm trên một dòng</p>
+            <div class="container nowrap">
+                <div class="item">1</div>
+                <div class="item">2</div>
+                <div class="item">3</div>
+                <div class="item">4</div>
+                <div class="item">5</div>
+                <div class="item">6</div>
+            </div>
+        </div>
+        <div class="demo">
+            <h2><code>flex-wrap: wrap;</code></h2>
+            <p>Các Item xuống dòng khi không đủ chỗ</p>
+            <div class="container wrap">
+                <div class="item">1</div>
+                <div class="item">2</div>
+                <div class="item">3</div>
+                <div class="item">4</div>
+                <div class="item">5</div>
+                <div class="item">6</div>
+            </div>
+        </div>
+        <div class="demo">
+            <h2><code>flex-wrap: wrap-reverse;</code></h2>
+            <p>Xuống dòng nhưng đảo hướng cross axis: dòng đầu nằm dưới cùng</p>
+            <div class="container wrap-reverse">
+                <div class="item">1</div>
+                <div class="item">2</div>
+                <div class="item">3</div>
+                <div class="item">4</div>
+                <div class="item">5</div>
+                <div class="item">6</div>
+            </div>
+        </div>
+        <div class="demo">
+            <h2><code>flex-wrap: initial;</code></h2>
+            <p>Về giá trị mặc định nowrap</p>
+            <div class="container initial">
+                <div class="item">1</div>
+                <div class="item">2</div>
+                <div class="item">3</div>
+                <div class="item">4</div>
+                <div class="item">5</div>
+                <div class="item">6</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

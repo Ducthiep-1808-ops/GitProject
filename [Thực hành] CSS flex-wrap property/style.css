@@ -1,0 +1,59 @@
+/* Tính padding vào trong width/height để mỗi Item đúng 180x80px */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.demo-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.demo h2 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.demo p {
+    margin-top: 0;
+}
+
+/* Ví dụ tổng hợp */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 600px;
+    height: 300px;
+    gap: 10px;
+    border: 2px solid black;
+}
+
+.item {
+    width: 180px;
+    height: 80px;
+    padding: 20px;
+    background-color: lightblue;
+    text-align: center;
+}
+
+/* Thử lần lượt các giá trị */
+.container.nowrap {
+    flex-wrap: nowrap;
+}
+
+.container.wrap {
+    flex-wrap: wrap;
+}
+
+.container.wrap-reverse {
+    flex-wrap: wrap-reverse;
+}
+
+.container.initial {
+    flex-wrap: initial;
+}
