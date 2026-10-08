@@ -1,0 +1,13 @@
+// components/_buttons.scss
+@use "sass:color";
+
+.button {
+  @include button-style($primary-color);
+  display: inline-block;
+  text-decoration: none;
+
+  // Nesting: & thay cho .button
+  &:hover {
+    background: color.adjust($primary-color, $lightness: -15%);
+  }
+}

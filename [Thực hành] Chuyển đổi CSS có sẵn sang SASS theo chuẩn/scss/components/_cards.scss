@@ -1,0 +1,15 @@
+// components/_cards.scss
+.card {
+  border: 1px solid $border-color;
+  padding: 20px;
+  @include box-shadow;
+
+  // Nesting: các phần tử con của .card
+  h3 {
+    margin-top: 0;
+  }
+
+  p {
+    margin-bottom: 15px;
+  }
+}
