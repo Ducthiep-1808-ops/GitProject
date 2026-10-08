@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Desktop: bố cục dạng lưới */
+.container {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas:
+        "header header"
+        "nav nav"
+        "content sidebar"
+        "footer footer";
+    gap: 10px;
+    min-height: 100vh;
+    padding: 10px;
+    background-color: #e9ecef;
+}
+
+.header {
+    grid-area: header;
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.nav {
+    grid-area: nav;
+    background-color: #34495e;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.nav a {
+    display: block;
+    padding: 14px 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.nav a:hover {
+    background-color: #1abc9c;
+}
+
+.content {
+    grid-area: content;
+    background-color: white;
+    padding: 20px;
+}
+
+.content h2,
+.sidebar h3 {
+    margin-bottom: 10px;
+}
+
+.content p {
+    margin-bottom: 10px;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: #fdf2e9;
+    padding: 20px;
+}
+
+.sidebar ul {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.sidebar a {
+    color: #2c3e50;
+}
+
+.ads {
+    background-color: #f5cba7;
+    text-align: center;
+    padding: 40px 10px;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Mobile: các phần xếp theo chiều dọc */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "header"
+            "nav"
+            "content"
+            "sidebar"
+            "footer";
+    }
+
+    .nav ul {
+        flex-direction: column;
+    }
+
+    .nav a {
+        text-align: center;
+    }
+}

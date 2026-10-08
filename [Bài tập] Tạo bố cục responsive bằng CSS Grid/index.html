@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bố cục responsive bằng CSS Grid</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>My Website</h1>
+            <p>Bố cục responsive bằng CSS Grid</p>
+        </header>
+
+        <nav class="nav">
+            <ul>
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="#">Giới thiệu</a></li>
+                <li><a href="#">Tin tức</a></li>
+                <li><a href="#">Liên hệ</a></li>
+            </ul>
+        </nav>
+
+        <main class="content">
+            <h2>Nội dung chính</h2>
+            <p>Đây là khu vực hiển thị nội dung chính của trang web. Trên desktop, nội dung chính
+                nằm bên trái và chiếm phần lớn chiều rộng, sidebar nằm bên phải.</p>
+            <p>Trên mobile, tất cả các phần được xếp theo chiều dọc: Header, Navigation, Nội dung
+                chính, Sidebar và Footer.</p>
+        </main>
+
+        <aside class="sidebar">
+            <h3>Tin tức</h3>
+            <ul>
+                <li><a href="#">Ra mắt sản phẩm mới</a></li>
+                <li><a href="#">Khuyến mãi tháng này</a></li>
+                <li><a href="#">Sự kiện sắp diễn ra</a></li>
+            </ul>
+            <div class="ads">Quảng cáo</div>
+        </aside>
+
+        <footer class="footer">
+            <p>&copy; 2024 My Website. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
