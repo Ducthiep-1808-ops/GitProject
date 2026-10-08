@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+h2 {
+    margin-top: 30px;
+}
+
+.container {
+    display: flex;
+    width: 800px;
+    height: 120px;
+    border: 2px solid black;
+}
+
+.item {
+    flex-basis: 80px;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.item:nth-of-type(1) { background-color: #e74c3c; }
+.item:nth-of-type(2) { background-color: #27ae60; }
+.item:nth-of-type(3) { background-color: #2980b9; }
+.item:nth-of-type(4) { background-color: #8e44ad; }
+.item:nth-of-type(5) { background-color: #f39c12; }
+
+/* Có flex-grow: div 2 tăng gấp 8 lần so với các div khác */
+.grow .item {
+    flex-grow: 1;
+}
+
+.grow .item:nth-of-type(2) {
+    flex-grow: 8;
+}
