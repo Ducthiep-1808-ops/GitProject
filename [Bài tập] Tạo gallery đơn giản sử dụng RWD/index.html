@@ -3,80 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery RWD</title>
+    <title>Responsive Image Gallery</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Gallery đơn giản sử dụng RWD</h1>
-    <p class="intro">Thu nhỏ cửa sổ trình duyệt để thấy gallery thay đổi số ảnh trên mỗi dòng.</p>
+    <h2>Responsive Image Gallery</h2>
+    <h4>Resize the browser window to see the effect.</h4>
 
-    <div class="gallery">
-        <div class="responsive">
-            <div class="item">
-                <a target="_blank" href="https://picsum.photos/id/10/1200/800">
-                    <img src="https://picsum.photos/id/10/600/400" alt="Ảnh 1">
-                </a>
-                <div class="desc">Mô tả ảnh 1</div>
-            </div>
+    <div class="responsive">
+        <div class="gallery">
+            <a target="_blank" href="https://picsum.photos/id/1015/1200/800">
+                <img src="https://picsum.photos/id/1015/600/400" alt="Ảnh phong cảnh" width="600" height="400">
+            </a>
+            <div class="desc">Add a description of the image here</div>
         </div>
-        <div class="responsive">
-            <div class="item">
-                <a target="_blank" href="https://picsum.photos/id/20/1200/800">
-                    <img src="https://picsum.photos/id/20/600/400" alt="Ảnh 2">
-                </a>
-                <div class="desc">Mô tả ảnh 2</div>
-            </div>
+    </div>
+
+    <div class="responsive">
+        <div class="gallery">
+            <a target="_blank" href="https://picsum.photos/id/1036/1200/800">
+                <img src="https://picsum.photos/id/1036/600/400" alt="Ảnh phong cảnh" width="600" height="400">
+            </a>
+            <div class="desc">Add a description of the image here</div>
         </div>
-        <div class="responsive">
-            <div class="item">
-                <a target="_blank" href="https://picsum.photos/id/30/1200/800">
-                    <img src="https://picsum.photos/id/30/600/400" alt="Ảnh 3">
-                </a>
-                <div class="desc">Mô tả ảnh 3</div>
-            </div>
+    </div>
+
+    <div class="responsive">
+        <div class="gallery">
+            <a target="_blank" href="https://picsum.photos/id/1039/1200/800">
+                <img src="https://picsum.photos/id/1039/600/400" alt="Ảnh phong cảnh" width="600" height="400">
+            </a>
+            <div class="desc">Add a description of the image here</div>
         </div>
-        <div class="responsive">
-            <div class="item">
-                <a target="_blank" href="https://picsum.photos/id/40/1200/800">
-                    <img src="https://picsum.photos/id/40/600/400" alt="Ảnh 4">
-                </a>
-                <div class="desc">Mô tả ảnh 4</div>
-            </div>
-        </div>
-        <div class="responsive">
-            <div class="item">
-                <a target="_blank" href="https://picsum.photos/id/50/1200/800">
-                    <img src="https://picsum.photos/id/50/600/400" alt="Ảnh 5">
-                </a>
-                <div class="desc">Mô tả ảnh 5</div>
-            </div>
-        </div>
-        <div class="responsive">
-            <div class="item">
-                <a target="_blank" href="https://picsum.photos/id/60/1200/800">
-                    <img src="https://picsum.photos/id/60/600/400" alt="Ảnh 6">
-                </a>
-                <div class="desc">Mô tả ảnh 6</div>
-            </div>
-        </div>
-        <div class="responsive">
-            <div class="item">
-                <a target="_blank" href="https://picsum.photos/id/70/1200/800">
-                    <img src="https://picsum.photos/id/70/600/400" alt="Ảnh 7">
-                </a>
-                <div class="desc">Mô tả ảnh 7</div>
-            </div>
-        </div>
-        <div class="responsive">
-            <div class="item">
-                <a target="_blank" href="https://picsum.photos/id/80/1200/800">
-                    <img src="https://picsum.photos/id/80/600/400" alt="Ảnh 8">
-                </a>
-                <div class="desc">Mô tả ảnh 8</div>
-            </div>
+    </div>
+
+    <div class="responsive">
+        <div class="gallery">
+            <a target="_blank" href="https://picsum.photos/id/1018/1200/800">
+                <img src="https://picsum.photos/id/1018/600/400" alt="Ảnh phong cảnh" width="600" height="400">
+            </a>
+            <div class="desc">Add a description of the image here</div>
         </div>
     </div>
 
     <div class="clearfix"></div>
+
+    <div class="note">
+        <p>This example use media queries to re-arrange the images on different screen sizes: for screens larger
+            than 700px wide, it will show four images side by side, for screens smaller than 700px, it will show
+            two images side by side. For screens smaller than 500px, the images will stack vertically (100%).</p>
+    </div>
 </body>
 </html>
