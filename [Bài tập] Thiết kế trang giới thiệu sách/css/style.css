@@ -1,0 +1,776 @@
+/* =========================================
+   1. BIẾN MÀU & RESET
+   ========================================= */
+:root {
+  --mau-chinh: #4f46e5;        /* tím xanh */
+  --mau-chinh-dam: #3730a3;
+  --mau-phu: #f59e0b;          /* vàng cam (điểm nhấn) */
+  --mau-chu: #1f2937;
+  --mau-chu-phu: #6b7280;
+  --mau-nen-xam: #f5f6fa;
+  --mau-trang: #ffffff;
+  --bo-goc: 12px;
+  --bong: 0 6px 24px rgba(31, 41, 55, 0.08);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;     /* cuộn mượt khi bấm menu */
+}
+
+body {
+  font-family: "Be Vietnam Pro", Arial, sans-serif;
+  color: var(--mau-chu);
+  line-height: 1.7;
+  background-color: var(--mau-trang);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* =========================================
+   2. NÚT BẤM DÙNG CHUNG
+   ========================================= */
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  border: 2px solid var(--mau-chinh);
+  border-radius: 999px;
+  background-color: var(--mau-chinh);
+  color: var(--mau-trang);
+  font-weight: 700;
+  font-size: 15px;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s, transform 0.2s;
+}
+
+.btn:hover {
+  background-color: var(--mau-chinh-dam);
+  border-color: var(--mau-chinh-dam);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--mau-chinh);
+}
+
+.btn-outline:hover {
+  background-color: var(--mau-chinh);
+  color: var(--mau-trang);
+}
+
+.btn-small {
+  padding: 8px 20px;
+  font-size: 14px;
+}
+
+.btn-light {
+  background-color: var(--mau-trang);
+  border-color: var(--mau-trang);
+  color: var(--mau-chinh);
+}
+
+.btn-light:hover {
+  background-color: var(--mau-phu);
+  border-color: var(--mau-phu);
+  color: var(--mau-chu);
+}
+
+/* =========================================
+   3. HEADER & MENU
+   ========================================= */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 1px 0 #eee;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: 800;
+}
+
+.logo span {
+  color: var(--mau-chinh);
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.menu a {
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.menu a:not(.btn):hover {
+  color: var(--mau-chinh);
+}
+
+/* Checkbox ẩn, chỉ dùng để bật/tắt menu trên điện thoại */
+.menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.menu-icon span {
+  display: block;
+  width: 24px;
+  height: 3px;
+  border-radius: 2px;
+  background-color: var(--mau-chu);
+}
+
+/* =========================================
+   4. BOOK OVERVIEW (HERO)
+   ========================================= */
+.hero {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #eef2ff 0%, #fdf4ff 100%);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  align-items: center;
+  gap: 48px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 4px 14px;
+  border-radius: 999px;
+  background-color: #fef3c7;
+  color: #92400e;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.hero h1 {
+  font-size: 52px;
+  line-height: 1.15;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.hero h1 span {
+  color: var(--mau-chinh);
+}
+
+.hero-text > p {
+  color: var(--mau-chu-phu);
+  font-size: 17px;
+  margin-bottom: 24px;
+}
+
+.hero-stats {
+  display: flex;
+  gap: 32px;
+  margin-bottom: 32px;
+}
+
+.hero-stats li {
+  color: var(--mau-chu-phu);
+}
+
+.hero-stats strong {
+  display: block;
+  font-size: 28px;
+  color: var(--mau-chu);
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* Bìa sách 3D vẽ bằng CSS */
+.hero-book {
+  display: flex;
+  justify-content: center;
+  perspective: 1200px;
+}
+
+.book {
+  width: 280px;
+  height: 400px;
+  transform: rotateY(-18deg);
+  transition: transform 0.5s;
+}
+
+.book:hover {
+  transform: rotateY(0deg);
+}
+
+.book-cover {
+  width: 100%;
+  height: 100%;
+  padding: 32px 28px;
+  border-radius: 4px 14px 14px 4px;
+  background: linear-gradient(160deg, var(--mau-chinh) 0%, #7c3aed 100%);
+  color: var(--mau-trang);
+  display: flex;
+  flex-direction: column;
+  box-shadow:
+    inset 8px 0 12px rgba(0, 0, 0, 0.25),   /* gáy sách */
+    20px 24px 40px rgba(55, 48, 163, 0.35);  /* bóng đổ */
+}
+
+.book-tag {
+  font-size: 40px;
+  font-weight: 800;
+  color: var(--mau-phu);
+}
+
+.book-cover h2 {
+  font-size: 34px;
+  line-height: 1.15;
+  margin-top: auto;            /* đẩy tiêu đề xuống dưới */
+}
+
+.book-cover p {
+  font-size: 20px;
+  opacity: 0.85;
+}
+
+.book-author {
+  margin-top: 24px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* =========================================
+   5. TIÊU ĐỀ MỤC DÙNG CHUNG
+   ========================================= */
+.section {
+  padding: 90px 0;
+}
+
+.section-gray {
+  background-color: var(--mau-nen-xam);
+}
+
+.section-head {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 48px;
+}
+
+.section-head p {
+  color: var(--mau-chu-phu);
+}
+
+.section-label {
+  display: inline-block;
+  color: var(--mau-chinh);
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.section-title {
+  font-size: 36px;
+  line-height: 1.25;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+/* =========================================
+   6. AUTHOR
+   ========================================= */
+.author-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  align-items: center;
+  gap: 56px;
+}
+
+.author-photo {
+  display: flex;
+  justify-content: center;
+}
+
+.avatar {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--mau-phu), #f97316);
+  color: var(--mau-trang);
+  font-size: 96px;
+  font-weight: 800;
+  box-shadow: 0 0 0 12px #fef3c7;
+}
+
+.author-text p {
+  color: var(--mau-chu-phu);
+  margin-bottom: 14px;
+}
+
+.author-info {
+  display: flex;
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.author-info li {
+  flex: 1;
+  padding: 16px;
+  border-radius: var(--bo-goc);
+  background-color: var(--mau-nen-xam);
+  text-align: center;
+}
+
+.author-info strong {
+  display: block;
+  font-size: 24px;
+  color: var(--mau-chinh);
+}
+
+.author-info span {
+  font-size: 14px;
+  color: var(--mau-chu-phu);
+}
+
+/* =========================================
+   7. FEATURES
+   ========================================= */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.feature {
+  padding: 32px 28px;
+  border-radius: var(--bo-goc);
+  background-color: var(--mau-trang);
+  box-shadow: var(--bong);
+  transition: transform 0.25s;
+}
+
+.feature:hover {
+  transform: translateY(-6px);
+}
+
+.feature-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #eef2ff;
+  color: var(--mau-chinh);
+  font-weight: 800;
+  margin-bottom: 18px;
+}
+
+.feature h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.feature p {
+  color: var(--mau-chu-phu);
+  font-size: 15px;
+}
+
+/* =========================================
+   8. PRICES
+   ========================================= */
+.prices-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  gap: 24px;
+}
+
+.price-card {
+  position: relative;
+  padding: 40px 32px;
+  border: 1px solid #e5e7eb;
+  border-radius: var(--bo-goc);
+  text-align: center;
+  background-color: var(--mau-trang);
+}
+
+.price-card h3 {
+  font-size: 20px;
+  color: var(--mau-chu-phu);
+}
+
+.price {
+  font-size: 40px;
+  font-weight: 800;
+  margin: 12px 0 24px;
+}
+
+.price span {
+  font-size: 20px;
+  vertical-align: super;
+}
+
+.price-card ul {
+  margin-bottom: 28px;
+}
+
+.price-card li {
+  padding: 10px 0;
+  border-bottom: 1px dashed #e5e7eb;
+  color: var(--mau-chu-phu);
+}
+
+.price-card li::before {
+  content: "✓ ";
+  color: var(--mau-chinh);
+  font-weight: 700;
+}
+
+/* Gói nổi bật */
+.price-card.popular {
+  padding: 56px 32px;
+  border: 2px solid var(--mau-chinh);
+  box-shadow: 0 16px 40px rgba(79, 70, 229, 0.18);
+}
+
+.popular-tag {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 4px 16px;
+  border-radius: 999px;
+  background-color: var(--mau-phu);
+  color: var(--mau-chu);
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* =========================================
+   9. DOWNLOAD
+   ========================================= */
+.download {
+  padding: 70px 0;
+  background: linear-gradient(135deg, var(--mau-chinh) 0%, #7c3aed 100%);
+  color: var(--mau-trang);
+}
+
+.download-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.download h2 {
+  font-size: 30px;
+  line-height: 1.3;
+  margin-bottom: 6px;
+}
+
+.download p {
+  opacity: 0.85;
+}
+
+.download-form {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.download-form input {
+  width: 280px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 999px;
+  font-size: 15px;
+  font-family: inherit;
+  outline: none;
+}
+
+/* =========================================
+   10. READER'S SAY
+   ========================================= */
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.review {
+  display: flex;
+  flex-direction: column;
+  padding: 32px 28px;
+  border-radius: var(--bo-goc);
+  background-color: var(--mau-trang);
+  box-shadow: var(--bong);
+}
+
+.stars {
+  color: var(--mau-phu);
+  font-size: 18px;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.review blockquote {
+  color: var(--mau-chu-phu);
+  font-style: italic;
+  margin-bottom: 24px;
+}
+
+.review figcaption {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: auto;            /* đẩy tên người đọc xuống đáy thẻ */
+}
+
+.reader-avatar {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #eef2ff;
+  color: var(--mau-chinh);
+  font-weight: 800;
+}
+
+.review figcaption span {
+  display: block;
+  font-size: 14px;
+  color: var(--mau-chu-phu);
+}
+
+/* =========================================
+   11. FOOTER
+   ========================================= */
+.footer {
+  padding-top: 60px;
+  background-color: #111827;
+  color: #9ca3af;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 32px;
+}
+
+.footer .logo {
+  color: var(--mau-trang);
+}
+
+.footer h4 {
+  color: var(--mau-trang);
+  margin-bottom: 12px;
+}
+
+.footer li {
+  margin-bottom: 6px;
+}
+
+.footer a:hover {
+  color: var(--mau-trang);
+}
+
+.copyright {
+  margin-top: 48px;
+  padding: 20px 16px;
+  border-top: 1px solid #1f2937;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* =========================================
+   12. RESPONSIVE
+   ========================================= */
+
+/* Máy tính bảng */
+@media (max-width: 992px) {
+  .hero h1 {
+    font-size: 42px;
+  }
+
+  .avatar {
+    width: 220px;
+    height: 220px;
+    font-size: 72px;
+  }
+
+  .features-grid,
+  .reviews-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .prices-grid {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+    margin: 0 auto;
+    gap: 36px;
+  }
+
+  .download-box {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* Điện thoại & máy tính bảng dọc */
+@media (max-width: 768px) {
+  /* Menu thu gọn thành nút 3 gạch */
+  .menu-icon {
+    display: flex;
+  }
+
+  .menu {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    padding: 8px 16px 16px;
+    background-color: var(--mau-trang);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    display: none;
+  }
+
+  .menu a {
+    width: 100%;
+    padding: 12px 0;
+  }
+
+  .menu a.btn {
+    margin-top: 8px;
+    text-align: center;
+  }
+
+  /* Khi checkbox được tích thì hiện menu */
+  .menu-toggle:checked ~ .menu {
+    display: flex;
+  }
+
+  .hero {
+    padding: 56px 0;
+  }
+
+  .hero-grid,
+  .author-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero-stats,
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-book {
+    order: -1;                 /* bìa sách lên trên chữ */
+  }
+
+  .book {
+    width: 220px;
+    height: 314px;
+  }
+
+  .book-cover h2 {
+    font-size: 26px;
+  }
+
+  .avatar {
+    width: 200px;
+    height: 200px;
+    font-size: 64px;
+  }
+
+  .section {
+    padding: 64px 0;
+  }
+
+  .section-title {
+    font-size: 30px;
+  }
+}
+
+/* Điện thoại nhỏ */
+@media (max-width: 576px) {
+  .hero h1 {
+    font-size: 34px;
+  }
+
+  .features-grid,
+  .reviews-grid,
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .author-info {
+    flex-direction: column;
+  }
+
+  .download-form {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .download-form input {
+    width: 100%;
+  }
+
+  .download h2 {
+    font-size: 24px;
+  }
+}

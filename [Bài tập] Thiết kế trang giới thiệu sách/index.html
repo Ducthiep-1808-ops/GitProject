@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lập Trình Web Từ Con Số 0</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header class="header">
+    <div class="container nav">
+      <a href="#" class="logo">Book<span>Web</span></a>
+
+      <!-- Nút menu trên điện thoại (dùng checkbox, không cần JS) -->
+      <input type="checkbox" id="menu-toggle" class="menu-toggle">
+      <label for="menu-toggle" class="menu-icon" aria-label="Mở menu">
+        <span></span><span></span><span></span>
+      </label>
+
+      <nav class="menu">
+        <a href="#overview">Giới thiệu</a>
+        <a href="#author">Tác giả</a>
+        <a href="#features">Nội dung</a>
+        <a href="#prices">Bảng giá</a>
+        <a href="#reviews">Cảm nhận</a>
+        <a href="#download" class="btn btn-small">Tải sách</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ================= BOOK OVERVIEW ================= -->
+  <section class="hero" id="overview">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <span class="badge">Sách mới 2026</span>
+        <h1>Lập Trình Web <br><span>Từ Con Số 0</span></h1>
+        <p>
+          Cuốn sách dẫn bạn đi từ những dòng HTML đầu tiên đến khi tự tay
+          xây dựng và đưa một website hoàn chỉnh lên Internet. Viết dễ hiểu,
+          nhiều ví dụ thực tế, phù hợp cho người mới bắt đầu.
+        </p>
+        <ul class="hero-stats">
+          <li><strong>320</strong> trang</li>
+          <li><strong>12</strong> chương</li>
+          <li><strong>45</strong> bài tập</li>
+        </ul>
+        <div class="hero-buttons">
+          <a href="#prices" class="btn">Mua ngay</a>
+          <a href="#download" class="btn btn-outline">Đọc thử miễn phí</a>
+        </div>
+      </div>
+
+      <!-- Bìa sách vẽ bằng CSS -->
+      <div class="hero-book">
+        <div class="book">
+          <div class="book-cover">
+            <span class="book-tag">&lt;/&gt;</span>
+            <h2>Lập Trình Web</h2>
+            <p>Từ Con Số 0</p>
+            <span class="book-author">Nguyễn Minh An</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= AUTHOR ================= -->
+  <section class="section" id="author">
+    <div class="container author-grid">
+      <div class="author-photo">
+        <div class="avatar">MA</div>
+      </div>
+      <div class="author-text">
+        <span class="section-label">Tác giả</span>
+        <h2 class="section-title">Nguyễn Minh An</h2>
+        <p>
+          Kỹ sư phần mềm với hơn 10 năm kinh nghiệm phát triển web, từng tham gia
+          xây dựng nhiều hệ thống thương mại điện tử và đào tạo hàng nghìn học viên
+          lập trình.
+        </p>
+        <p>
+          Với cách giảng giải gần gũi, tác giả mong muốn ai cũng có thể bắt đầu
+          học lập trình mà không cảm thấy sợ hãi.
+        </p>
+        <ul class="author-info">
+          <li><strong>10+</strong><span>Năm kinh nghiệm</span></li>
+          <li><strong>5.000+</strong><span>Học viên</span></li>
+          <li><strong>3</strong><span>Đầu sách</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FEATURES ================= -->
+  <section class="section section-gray" id="features">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-label">Nội dung</span>
+        <h2 class="section-title">Bạn sẽ học được gì?</h2>
+        <p>Mỗi chương đều có ví dụ minh họa và bài tập thực hành.</p>
+      </div>
+
+      <div class="features-grid">
+        <article class="feature">
+          <div class="feature-icon">01</div>
+          <h3>HTML cơ bản</h3>
+          <p>Hiểu cấu trúc trang web, thẻ, thuộc tính và cách tổ chức nội dung đúng chuẩn.</p>
+        </article>
+        <article class="feature">
+          <div class="feature-icon">02</div>
+          <h3>CSS &amp; bố cục</h3>
+          <p>Màu sắc, font chữ, Flexbox, Grid và cách sắp xếp giao diện đẹp mắt.</p>
+        </article>
+        <article class="feature">
+          <div class="feature-icon">03</div>
+          <h3>Responsive</h3>
+          <p>Làm trang web hiển thị tốt trên máy tính, máy tính bảng và điện thoại.</p>
+        </article>
+        <article class="feature">
+          <div class="feature-icon">04</div>
+          <h3>JavaScript</h3>
+          <p>Thêm tương tác cho trang: xử lý sự kiện, thay đổi nội dung, kiểm tra form.</p>
+        </article>
+        <article class="feature">
+          <div class="feature-icon">05</div>
+          <h3>Git &amp; GitHub</h3>
+          <p>Quản lý mã nguồn, làm việc nhóm và lưu trữ dự án trên GitHub.</p>
+        </article>
+        <article class="feature">
+          <div class="feature-icon">06</div>
+          <h3>Dự án thực tế</h3>
+          <p>Tự xây dựng website hoàn chỉnh và đưa lên Internet để mọi người cùng xem.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PRICES ================= -->
+  <section class="section" id="prices">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-label">Bảng giá</span>
+        <h2 class="section-title">Chọn phiên bản phù hợp</h2>
+        <p>Thanh toán một lần, cập nhật nội dung miễn phí trọn đời.</p>
+      </div>
+
+      <div class="prices-grid">
+        <div class="price-card">
+          <h3>Ebook</h3>
+          <p class="price">99.000<span>đ</span></p>
+          <ul>
+            <li>File PDF và EPUB</li>
+            <li>Đọc trên mọi thiết bị</li>
+            <li>Cập nhật miễn phí</li>
+          </ul>
+          <a href="#download" class="btn btn-outline">Chọn gói</a>
+        </div>
+
+        <div class="price-card popular">
+          <span class="popular-tag">Phổ biến nhất</span>
+          <h3>Sách in</h3>
+          <p class="price">189.000<span>đ</span></p>
+          <ul>
+            <li>Sách bìa cứng, in màu</li>
+            <li>Tặng kèm bản Ebook</li>
+            <li>Giao hàng toàn quốc</li>
+          </ul>
+          <a href="#download" class="btn">Chọn gói</a>
+        </div>
+
+        <div class="price-card">
+          <h3>Trọn bộ</h3>
+          <p class="price">349.000<span>đ</span></p>
+          <ul>
+            <li>Sách in + Ebook</li>
+            <li>Mã nguồn tất cả bài tập</li>
+            <li>Nhóm hỏi đáp riêng</li>
+          </ul>
+          <a href="#download" class="btn btn-outline">Chọn gói</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= DOWNLOAD ================= -->
+  <section class="download" id="download">
+    <div class="container download-box">
+      <div>
+        <h2>Đọc thử 3 chương đầu miễn phí</h2>
+        <p>Nhập email để nhận file PDF đọc thử ngay hôm nay.</p>
+      </div>
+      <form class="download-form">
+        <input type="email" placeholder="Email của bạn" required>
+        <button type="submit" class="btn btn-light">Tải xuống</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ================= READER'S SAY ================= -->
+  <section class="section section-gray" id="reviews">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-label">Cảm nhận</span>
+        <h2 class="section-title">Độc giả nói gì?</h2>
+      </div>
+
+      <div class="reviews-grid">
+        <figure class="review">
+          <div class="stars">★★★★★</div>
+          <blockquote>
+            “Trước đây mình nghĩ lập trình rất khó, nhưng cuốn sách giải thích rất dễ hiểu.
+            Sau 2 tháng mình đã tự làm được trang web cá nhân.”
+          </blockquote>
+          <figcaption>
+            <div class="reader-avatar">L</div>
+            <div><strong>Lan Anh</strong><span>Sinh viên</span></div>
+          </figcaption>
+        </figure>
+
+        <figure class="review">
+          <div class="stars">★★★★★</div>
+          <blockquote>
+            “Bài tập cuối mỗi chương rất hay, giúp mình nhớ kiến thức lâu hơn.
+            Phần responsive là phần mình thích nhất.”
+          </blockquote>
+          <figcaption>
+            <div class="reader-avatar">H</div>
+            <div><strong>Hoàng Nam</strong><span>Nhân viên văn phòng</span></div>
+          </figcaption>
+        </figure>
+
+        <figure class="review">
+          <div class="stars">★★★★☆</div>
+          <blockquote>
+            “Nội dung bám sát thực tế, ví dụ rõ ràng. Rất phù hợp cho người
+            muốn chuyển ngành sang lập trình.”
+          </blockquote>
+          <figcaption>
+            <div class="reader-avatar">T</div>
+            <div><strong>Thu Trang</strong><span>Giáo viên</span></div>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="#" class="logo">Book<span>Web</span></a>
+        <p>Sách lập trình dành cho người mới bắt đầu.</p>
+      </div>
+      <div>
+        <h4>Liên kết</h4>
+        <ul>
+          <li><a href="#overview">Giới thiệu</a></li>
+          <li><a href="#features">Nội dung</a></li>
+          <li><a href="#prices">Bảng giá</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Liên hệ</h4>
+        <ul>
+          <li>Email: lienhe@bookweb.vn</li>
+          <li>Điện thoại: 0900 000 000</li>
+        </ul>
+      </div>
+    </div>
+    <p class="copyright">&copy; 2026 BookWeb. Bảo lưu mọi quyền.</p>
+  </footer>
+
+</body>
+</html>
